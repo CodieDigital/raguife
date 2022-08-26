@@ -1,0 +1,20 @@
+module.exports = {
+  trailingSlash: true,
+  images: {
+    domains: [
+      "localhost",
+      "images.codie.digital",
+      "painel.reguife.com.br.144-208-108-40.ph105.peopleshostshared.com"
+    ],
+    experimental: {
+      forceSwcTransforms: true,
+    },
+    swcMinify: true,
+    compiler: {
+      styledComponents: {
+        displayName: true,
+        ssr: true,
+      },
+    },
+  },
+};
