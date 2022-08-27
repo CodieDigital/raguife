@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TabContent = styled.section`
-  background-color: #dfdfdf;
+  background-color: #004d56;
   padding: 60px;
 
   .content {
@@ -11,11 +11,18 @@ export const TabContent = styled.section`
   strong {
     display: flex;
     margin-bottom: 20px;
+    gap: 5px;
   }
 
   p {
+    color: #fff;
     line-height: 28px;
     max-width: 1230px;
+  }
+
+  .definitions-item {
+    display: flex;
+    gap: 4px;
   }
 
   @media only screen and (max-width: 1600px) {
@@ -26,15 +33,7 @@ export const TabContent = styled.section`
     }
   }
 
-  @media only screen and (max-width: 1600px) {
-    padding: 45px 50px;
-
-    strong {
-      margin-bottom: 10px;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1400px) {
     padding: 40px 45px;
 
     p {
@@ -64,6 +63,10 @@ export const TabContent = styled.section`
       max-width: 90%;
       margin: 0 auto;
     }
+
+    p {
+      line-height: 22px;
+    }
   }
 
   @media only screen and (max-width: 500px) {
@@ -76,9 +79,17 @@ export const TabContent = styled.section`
     .content {
       max-width: 95%;
     }
+
+    p {
+      line-height: 21px;
+    }
   }
 
   @media only screen and (max-width: 420px) {
     padding: 20px 10px;
+
+    p {
+      line-height: 20px;
+    }
   }
 `;

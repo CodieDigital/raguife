@@ -19,7 +19,7 @@ export const TabsSection = styled.section`
   }
 
   button {
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid var(--secundary-color);
     border-bottom: unset;
     border-top-left-radius: 10px;
@@ -29,17 +29,17 @@ export const TabsSection = styled.section`
     align-items: center;
     justify-content: center;
     padding: 0 25px;
-    color: var(--secundary-color);
+    color: var(--tertiary-color);
     transition: 0.4s;
   }
 
   button:hover {
-    background-color: var(--secundary-color) !important;
+    background-color: var(--tertiary-color) !important;
     color: #fff;
   }
 
   .button-tab.active {
-    background-color: var(--secundary-color);
+    background-color: var(--tertiary-color);
     color: #fff;
   }
 

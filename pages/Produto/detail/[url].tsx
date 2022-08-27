@@ -110,6 +110,7 @@ export default function DetailProductPage({
       <Head>
         <title>{head.pageTitle}</title>
       </Head>
+
       <S.ShopDetail>
         <section className="box-product">
           <div className="show-mobile">
@@ -165,11 +166,7 @@ export default function DetailProductPage({
 
         <BenefitsComponent listBenefits={listBenefitsSubstituir} />
 
-        <Tabela itemsTable={tabela} />
-
-        <Tabela itemsTable={tabela2} isTitle />
-
-        <TabsSectionComponent />
+        <TabsSectionComponent product={detail}  />
       </S.ShopDetail>
     </Layout>
   );
