@@ -61,10 +61,10 @@ export const Sobre = styled.section`
       justify-content: space-between;
       align-items: center;
       gap: 40px;
-      color:#fff;
+      color: #fff;
     }
 
-    .text{
+    .text {
       max-width: 630px;
     }
 
@@ -196,7 +196,7 @@ export const Sobre = styled.section`
       background-color: var(--primary-color);
       color: #fff;
       border-radius: 5px;
-      transition: .3;
+      transition: 0.3;
     }
 
     .bt:hover {
@@ -206,6 +206,14 @@ export const Sobre = styled.section`
 
   .beneficios {
     padding: 80px 0;
+
+    .hide-mobile {
+      display: block;
+    }
+
+    .show-mobile {
+      display: none;
+    }
 
     .container {
       display: flex;
@@ -255,12 +263,20 @@ export const Sobre = styled.section`
     .sobre {
       padding: 90px 0 100px;
 
+      .text {
+        max-width: 560px;
+      }
+
+      .image {
+        max-width: 585px;
+      }
+
       h2 + * {
         margin-top: 20px;
       }
 
       p {
-        line-height: 23.5px;
+        line-height: 22.5px;
       }
     }
 
@@ -302,12 +318,20 @@ export const Sobre = styled.section`
     .sobre {
       padding: 75px 0 85px;
 
+      .text {
+        max-width: 470px;
+      }
+
+      .image {
+        max-width: 510px;
+      }
+
       h2 + * {
         margin-top: 15px;
       }
 
       p {
-        line-height: 23px;
+        line-height: 21.5px;
       }
     }
 
@@ -344,6 +368,10 @@ export const Sobre = styled.section`
 
     .sobre {
       padding: 60px 0 70px;
+
+      .text {
+        max-width: 430px;
+      }
 
       h2 + * {
         margin-top: 10px;
@@ -406,6 +434,15 @@ export const Sobre = styled.section`
     .sobre {
       padding: 40px 0 50px;
 
+      .image {
+        display: none;
+      }
+
+      .text {
+        max-width: 100%;
+        text-align: center;
+      }
+
       h2 + * {
         margin-top: 5px;
       }
@@ -440,6 +477,46 @@ export const Sobre = styled.section`
         br {
           display: none;
         }
+      }
+
+      .swiper-button-next {
+        right: 0;
+        color: #fff;
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        color: #fff;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 25px;
+      }
+    }
+
+    .beneficios {
+      .hide-mobile {
+        display: none;
+      }
+
+      .box-beneficios {
+        max-width: 240px;
+        margin: 0 auto;
+
+        img {
+          max-width: 45px;
+        }
+
+        h4 {
+          font-size: 13px;
+        }
+      }
+
+      .show-mobile {
+        display: block !important;
+        max-width: 660px;
+        margin: 0 auto;
       }
 
       .swiper-button-next {
@@ -637,15 +714,13 @@ export const Sobre = styled.section`
       }
 
       .box-nutricao {
-
         img {
           max-height: 50px;
         }
 
-        img+*{
+        img + * {
           margin-top: 11px;
         }
-
 
         h4 {
           font-size: 12px;

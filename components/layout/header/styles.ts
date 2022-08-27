@@ -220,6 +220,10 @@ export const Header = styled.header`
           padding: 12px 14px 12px 15px;
         }
 
+        a:hover {
+          color: var(--primary-color);
+        }
+
         a + a {
           padding-top: 10px;
           margin-top: 5px;

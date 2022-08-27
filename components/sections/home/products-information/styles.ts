@@ -86,7 +86,8 @@ export const ProductInformation = styled.section`
         object-fit: cover;
       }
 
-      .top+*,p + * {
+      .top + *,
+      p + * {
         margin-top: 18px;
       }
 
@@ -119,6 +120,13 @@ export const ProductInformation = styled.section`
     h2 {
       line-height: 70px;
     }
+
+    .text {
+      .top {
+        gap: 15px;
+        font-size: 28px;
+      }
+    }
   }
 
   @media only screen and (max-width: 1400px) {
@@ -126,6 +134,13 @@ export const ProductInformation = styled.section`
 
     h2 {
       line-height: 60px;
+    }
+
+    .text {
+      .top {
+        gap: 13px;
+        font-size: 24px;
+      }
     }
 
     .box-categorias {
@@ -151,9 +166,21 @@ export const ProductInformation = styled.section`
       line-height: 50px;
     }
 
+    .text {
+      .top {
+        gap: 11px;
+        font-size: 22px;
+      }
+    }
+
     .box-categorias {
       .text {
         padding: 30px 30px 30px 40px;
+
+        .top + *,
+        p + * {
+          margin-top: 16px;
+        }
       }
 
       a {
@@ -174,6 +201,17 @@ export const ProductInformation = styled.section`
     h2 {
       line-height: 30px;
       margin-bottom: 10px;
+    }
+
+    .text {
+      .top {
+        gap: 9px;
+        font-size: 20px;
+
+        h3 {
+          margin-top: 0;
+        }
+      }
     }
 
     .grid-categorias {
@@ -200,6 +238,11 @@ export const ProductInformation = styled.section`
         .icon-box {
           max-height: 45px;
         }
+
+        .top + *,
+        p + * {
+          margin-top: 14px;
+        }
       }
 
       a {
@@ -225,6 +268,12 @@ export const ProductInformation = styled.section`
       .text {
         .icon-box {
           max-width: 40px;
+        }
+
+        .top {
+          h3 {
+            margin-top: 0;
+          }
         }
 
         p {
@@ -280,12 +329,22 @@ export const ProductInformation = styled.section`
 
       .icon-box {
         display: flex;
-        margin: 0 auto;
+        margin: 0;
       }
 
       .text {
         margin-bottom: 15px;
         position: relative;
+
+        .top {
+          justify-content: center;
+          font-size: 19px;
+          gap: 8px;
+
+          h3 {
+            margin-top: 3px;
+          }
+        }
 
         p {
           text-align: center;
@@ -349,6 +408,21 @@ export const ProductInformation = styled.section`
       .text {
         padding: 15px 20px;
 
+        .top {
+          font-size: 15px;
+          gap: 8px;
+
+          h3 {
+            margin-top: 4.5px;
+          }
+        }
+
+        .icon-box {
+          max-width: 32px;
+          max-height: 32px;
+          object-fit: contain;
+        }
+
         .icon-box + *,
         .text p + * {
           margin-top: 10px;
@@ -363,6 +437,15 @@ export const ProductInformation = styled.section`
         font-size: 10px;
         max-width: 155px;
         height: 27px;
+      }
+    }
+
+    .box-categorias {
+      .text {
+        .top + *,
+        p + * {
+          margin-top: 12px;
+        }
       }
     }
 

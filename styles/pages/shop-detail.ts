@@ -51,6 +51,26 @@ export const ShopDetail = styled.main`
       width: 100%;
       padding-top: 7%;
 
+      .breadcrumb {
+        li {
+          a,
+          span {
+            color: #fff;
+            opacity: 0.5;
+          }
+
+          a:hover {
+            color: var(--secundary-color);
+            opacity: 1;
+          }
+        }
+
+        li::after {
+          color: #fff;
+          opacity: 0.5;
+        }
+      }
+
       .top {
         h2 {
           min-height: 90px;
@@ -67,7 +87,7 @@ export const ShopDetail = styled.main`
     }
 
     .benefits {
-      color: #585857;
+      color: #fff;
     }
 
     .box {
@@ -76,10 +96,14 @@ export const ShopDetail = styled.main`
       margin-top: 7px;
     }
 
+    .quantity {
+      color: #fff;
+    }
+
     .box-quantity {
       max-width: 95px;
       width: 100%;
-      border: 1px solid var(--secundary-color);
+      border: 1px solid var(--tertiary-color);
       border-radius: 10px;
       height: 48px;
       display: flex;
@@ -93,7 +117,7 @@ export const ShopDetail = styled.main`
   }
 
   .bg-green {
-    background-color: var(--secundary-color);
+    background-color: var(--tertiary-color);
     height: 68%;
     width: calc(100% + 50vw);
     position: absolute;
@@ -327,7 +351,7 @@ export const ShopDetail = styled.main`
         margin-bottom: 10px;
       }
 
-      .breadcrumb{
+      .breadcrumb {
         margin-left: 10px;
       }
 
@@ -375,7 +399,7 @@ export const ShopDetail = styled.main`
     }
   }
 
-  @media only screen and (max-width:400px) {
+  @media only screen and (max-width: 400px) {
     .box-product {
       .text {
         .top {
@@ -394,7 +418,7 @@ export const ShopDetail = styled.main`
             font-size: 13.5px;
           }
 
-          li+li {
+          li + li {
             margin-top: 5px;
           }
         }

@@ -7,23 +7,15 @@ import * as S from "./styles";
 
 export function FooterComponent() {
   return (
-    <S.Footer >
+    <S.Footer>
       <Container>
-        <div className="top-content" >
+        <div className="top-content">
           <div className="logo">
             <Link href={"/"} passHref>
               <a href="replaced" className="logo-pets">
-                <img src="/images/logo.png" alt="Logo footer" />
+                <img src="/images/logo-footer.png" alt="Logo footer" />
               </a>
             </Link>
-
-            <a
-              target={"_blank"}
-              href="https://grupoambaramaral.com.br/"
-              className="logo-ambar"
-            >
-              <img src="/images/logo-ambar.png" alt="Logo Ambar" />
-            </a>
           </div>
 
           <div className="links hide-mobile">
@@ -73,8 +65,12 @@ export function FooterComponent() {
           <div className="links">
             <RedesSociasComponent />
 
-            <a target={"_blank"} href="https://www.ceopet.com.br/" className="logo-ceo">
-              <img src="/images/logo-ceopet.png" alt="Logo ceo-pet" />
+            <a
+              target={"_blank"}
+              href="https://grupoambaramaral.com.br/"
+              className="logo-ambar"
+            >
+              <img src="/images/logo-ambar.png" alt="Logo Ambar" />
             </a>
           </div>
         </div>

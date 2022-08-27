@@ -26,14 +26,9 @@ export const Footer = styled.footer`
     margin-top: 25px;
   }
 
-  .logo {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-
   .logo-pets {
-    max-width: 200px;
+    max-width: 300px;
+    display: flex;
 
     img {
       width: 100%;
@@ -77,6 +72,7 @@ export const Footer = styled.footer`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    place-self: flex-start;
 
     a {
       margin-top: 0;
@@ -103,6 +99,10 @@ export const Footer = styled.footer`
     .top-content + * {
       margin-top: 45px;
     }
+
+    .logo-pets {
+      max-width: 230px;
+    }
   }
 
   @media only screen and (max-width: 1400px) {
@@ -110,6 +110,14 @@ export const Footer = styled.footer`
 
     .top-content + * {
       margin-top: 35px;
+    }
+
+    .logo-pets {
+      max-width: 190px;
+    }
+
+    .logo-ambar {
+      max-width: 130px;
     }
 
     .barra-codie {
@@ -126,6 +134,10 @@ export const Footer = styled.footer`
       a + * {
         margin-top: 5px;
       }
+    }
+
+    .redes-sociais {
+      gap: 10px 16px;
     }
 
     .redes-sociais + * {
@@ -182,6 +194,7 @@ export const Footer = styled.footer`
 
     .logo-ambar {
       max-width: 110px;
+      margin: 20px auto 0;
     }
 
     .top-content {

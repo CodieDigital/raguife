@@ -9,7 +9,7 @@ export interface ProductListItem {
   subtitulo: string;
   imagem: string;
   url: string;
-  categoria: string;
+  categoriaTitle: string;
 }
 
 export interface Product {
@@ -25,6 +25,16 @@ export interface Product {
   extra2: string;
   extra3: string;
   extra4: string;
+
+  //preciso receber
+  categoryTitle: string; //para breadcrumb
+  categoryFilter:string; //para subtitulo lista 1
+  sabor:string; // para subititulo lista 2
+  disponibilidade: Disponivel[]; // box disponibilidade
+}
+
+interface Disponivel {
+  titulo: string;
 }
 
 interface ProductVariation {
@@ -49,10 +59,18 @@ export interface Imagem {
   fileData: string;
 }
 
+export interface Benefits {
+  id: number;
+  icon: string;
+  title: string;
+  subTitle: string;
+}
+
 export interface ProductDetail {
   detail: Product;
-  variations: ProductVariation[];
   head: HeadPage;
+  benefit: Benefits[];
+  product:ProductListItem,
 }
 
 export interface ProductProps {
@@ -88,8 +106,6 @@ export async function GetProducts(
       )}`
     );
 
-    console.log(data);
-
     if (data) {
       return data;
     }
@@ -104,7 +120,19 @@ export async function GetProductsHome(
   if (router) {
     const { data } = await api.get<ProductProps>(`/Produto/list/GetAll`);
 
-    console.log(data);
+    if (data) {
+      return data;
+    }
+
+    return { products: [] };
+  }
+}
+
+export async function GetProductsCats(
+  router: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
+) {
+  if (router) {
+    const { data } = await api.get<ProductProps>(`/Produto/list/para-gatos`);
 
     if (data) {
       return data;
@@ -113,6 +141,22 @@ export async function GetProductsHome(
     return { products: [] };
   }
 }
+
+
+export async function GetProductsDogs(
+  router: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
+) {
+  if (router) {
+    const { data } = await api.get<ProductProps>(`/Produto/list/para-dogs`);
+
+    if (data) {
+      return data;
+    }
+
+    return { products: [] };
+  }
+}
+
 
 export async function GetProduct(
   router: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>

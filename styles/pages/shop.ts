@@ -4,7 +4,7 @@ export const Shop = styled.main`
   padding-bottom: 120px;
 
   .top {
-    background-color: var(--secundary-color);
+    background-color: var(--tertiary-color);
     aspect-ratio: 1920/300;
     display: flex;
     align-items: center;
@@ -47,7 +47,11 @@ export const Shop = styled.main`
     }
 
     h3 {
-      color: #585857;
+      color: #fff;
+    }
+
+    span {
+      color: var(--tertiary-color);
     }
   }
 

@@ -18,15 +18,6 @@ export function CardProductComponent({ card }: CardProps) {
   return (
     <S.CardProduct className="card-list">
       <div className="image">
-        {/* <Link
-          passHref
-          href={{
-            pathname: "/product/[sku]/[url]",
-            query: {
-              url: card.url ? card.url : "default",
-            },
-          }}
-        > */}
         <Link
           passHref
           href={{
@@ -43,16 +34,12 @@ export function CardProductComponent({ card }: CardProps) {
       </div>
 
       <div className="text">
-        {/* <Link
-          passHref
-          href={{
-            pathname: "/product/[sku]/[url]",
+        <Link passHref href={{
+            pathname: "/Produto/detail/[url]",
             query: {
               url: card.url ? card.url : "default",
             },
-          }}
-        > */}
-        <Link passHref href={"Produto/detail/" + card.url}>
+          }}>
           <a href="replaced">
             <h3 className="title-5-bold">{card.titulo}</h3>
           </a>

@@ -225,141 +225,332 @@ export default function SobrePage() {
         </div>
 
         <div className="beneficios">
-          <Container>
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-1.png"
-                alt="Icone box"
-              />
+          <div className="show-mobile">
+            <Container>
+              <Swiper
+                navigation={true}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                  },
+                  680: {
+                    slidesPerView: 2,
+                  },
+                  901: {
+                    slidesPerView: 2,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-1.png"
+                      alt="Icone box"
+                    />
 
-              <div className="text">
-                <h4 className="title-6-bold">Manutenção das Articulações</h4>
-                <p className="paragraph-6-regular">
-                  Sulfato de condroitina e glicosamina
-                </p>
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Manutenção das Articulações
+                      </h4>
+                      <p className="title-6-regular">
+                        Sulfato de condroitina e glicosamina
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-2.png"
+                      alt="Icone box"
+                    />
+
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Controle e Redução do Tartáro
+                      </h4>
+                      <p className="title-6-regular">
+                        Hexametafosfato de sódio
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-3.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Favorece a Função Cognitiva
+                      </h4>
+                      <p className="title-6-regular">DHA</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-4.png"
+                      alt="Icone box"
+                    />
+                    <div className="texte">
+                      <h4 className="title-6-bold">
+                        Equilíbrio da Flora Intestinal
+                      </h4>
+                      <p className="title-6-regular">
+                        Prebiótico e beta-glucanas
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-5.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Odor e Volume de Fezes Reduzidos
+                      </h4>
+                      <p className="title-6-regular">
+                        Extrato de yucca e polpa de beterraba
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-6.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Pele mais Saudável e Pelos mais Bonitos
+                      </h4>
+                      <p className="title-6-regular">
+                        Ômegas 3 e 6, biotina e zinco orgânico
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-7.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">Antioxidantes Naturais</h4>
+                      <p className="title-6-regular">
+                        Vitamina E, Vitamina A, e SE Orgânico
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-8.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Maior Digestibilidade e Aproveitamento dos Nutrientes
+                      </h4>
+                      <p className="title-6-regular">
+                        Nutrientes nobres e proteína de qualidade
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-9.png"
+                      alt="Icone box"
+                    />
+                    <div className="text">
+                      <h4 className="title-6-bold">Crescimento Saudável</h4>
+                      <p className="title-6-regular">
+                        Equilíbrio entre os Minerais
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="box-beneficios">
+                    <img
+                      src="/images/icon-beneficios/icon-box-beneficios-10.png"
+                      alt="Icone box"
+                    />
+
+                    <div className="text">
+                      <h4 className="title-6-bold">
+                        Sem Corantes e aromatizantes Artificiais
+                      </h4>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </Container>
+          </div>
+
+          <div className="hide-mobile">
+            <Container>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-1.png"
+                  alt="Icone box"
+                />
+
+                <div className="text">
+                  <h4 className="title-6-bold">Manutenção das Articulações</h4>
+                  <p className="title-6-regular">
+                    Sulfato de condroitina e glicosamina
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-2.png"
-                alt="Icone box"
-              />
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-2.png"
+                  alt="Icone box"
+                />
 
-              <div className="text">
-                <h4 className="title-6-bold">Controle e Redução do Tartáro</h4>
-                <p className="paragraph-6-regular">Hexametafosfato de sódio</p>
+                <div className="text">
+                  <h4 className="title-6-bold">
+                    Controle e Redução do Tartáro
+                  </h4>
+                  <p className="title-6-regular">
+                    Hexametafosfato de sódio
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-3.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">Favorece a Função Cognitiva</h4>
-                <p className="paragraph-6-regular">DHA</p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-3.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">Favorece a Função Cognitiva</h4>
+                  <p className="title-6-regular">DHA</p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-4.png"
-                alt="Icone box"
-              />
-              <div className="texte">
-                <h4 className="title-6-bold">Equilíbrio da Flora Intestinal</h4>
-                <p className="paragraph-6-regular">
-                  Prebiótico e beta-glucanas
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-4.png"
+                  alt="Icone box"
+                />
+                <div className="texte">
+                  <h4 className="title-6-bold">
+                    Equilíbrio da Flora Intestinal
+                  </h4>
+                  <p className="title-6-regular">
+                    Prebiótico e beta-glucanas
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-5.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">
-                  Odor e Volume de Fezes Reduzidos
-                </h4>
-                <p className="paragraph-6-regular">
-                  Extrato de yucca e polpa de beterraba
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-5.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">
+                    Odor e Volume de Fezes Reduzidos
+                  </h4>
+                  <p className="title-6-regular">
+                    Extrato de yucca e polpa de beterraba
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-6.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">
-                  Pele mais Saudável e Pelos mais Bonitos
-                </h4>
-                <p className="paragraph-6-regular">
-                  Ômegas 3 e 6, biotina e zinco orgânico
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-6.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">
+                    Pele mais Saudável e Pelos mais Bonitos
+                  </h4>
+                  <p className="title-6-regular">
+                    Ômegas 3 e 6, biotina e zinco orgânico
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-7.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">Antioxidantes Naturais</h4>
-                <p className="paragraph-6-regular">
-                  Vitamina E, Vitamina A, e SE Orgânico
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-7.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">Antioxidantes Naturais</h4>
+                  <p className="title-6-regular">
+                    Vitamina E, Vitamina A, e SE Orgânico
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-8.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">
-                  Maior Digestibilidade e Aproveitamento dos Nutrientes
-                </h4>
-                <p className="paragraph-6-regular">
-                  Nutrientes nobres e proteína de qualidade
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-8.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">
+                    Maior Digestibilidade e Aproveitamento dos Nutrientes
+                  </h4>
+                  <p className="title-6-regular">
+                    Nutrientes nobres e proteína de qualidade
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-9.png"
-                alt="Icone box"
-              />
-              <div className="text">
-                <h4 className="title-6-bold">Crescimento Saudável</h4>
-                <p className="paragraph-6-regular">
-                  Equilíbrio entre os Minerais
-                </p>
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-9.png"
+                  alt="Icone box"
+                />
+                <div className="text">
+                  <h4 className="title-6-bold">Crescimento Saudável</h4>
+                  <p className="title-6-regular">
+                    Equilíbrio entre os Minerais
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="box-beneficios">
-              <img
-                src="/images/icon-beneficios/icon-box-beneficios-10.png"
-                alt="Icone box"
-              />
+              <div className="box-beneficios">
+                <img
+                  src="/images/icon-beneficios/icon-box-beneficios-10.png"
+                  alt="Icone box"
+                />
 
-              <div className="text">
-                <h4 className="title-6-bold">
-                  Sem Corantes e aromatizantes Artificiais
-                </h4>
+                <div className="text">
+                  <h4 className="title-6-bold">
+                    Sem Corantes e aromatizantes Artificiais
+                  </h4>
+                </div>
               </div>
-            </div>
-          </Container>
+            </Container>
+          </div>
         </div>
 
         <div className="tradicao">

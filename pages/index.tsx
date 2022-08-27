@@ -14,16 +14,21 @@ import {
 import * as S from "../styles/pages/home";
 import { DestaquesProdutosComponent } from "../components/layout/DestaquesProdutos";
 import { ProductShowCase } from "components/sections/shop-detail/carousel";
-import { GetProducts, GetProductsHome, ProductListItem, ProductProps } from "src/services/shop/get";
+import {
+  GetProducts,
+  GetProductsHome,
+  ProductListItem,
+  ProductProps,
+} from "src/services/shop/get";
 import { Banner } from "components/sections/home/banner";
+import { Container } from "components/data/container";
 
 interface HomeProps {
   products: ProductProps;
   banners: Banner[];
 }
 
-export default function HomePage({products, banners}:HomeProps ) {
-
+export default function HomePage({ products, banners }: HomeProps) {
   return (
     <Layout>
       <S.HomePage>
@@ -35,11 +40,21 @@ export default function HomePage({products, banners}:HomeProps ) {
 
         <BeneficiosInformacoes />
 
-        <DestaquesProdutosComponent withActions title="Produtos de destaque" listProducts={products.items} />
+        <DestaquesProdutosComponent
+          withActions
+          title="Produtos de destaque"
+          listProducts={products.items}
+        />
 
         <div className="image-text">
-          <div className="image">
-            <img src="/images/text-image" alt="" />
+          <div className="container-text-image">
+            <div className="image">
+              <img src="/images/text-image-4.png" alt="Cachorro e gato" />
+            </div>
+
+            <div className="text">
+              <img src="/images/image-text-home.png" alt="Texto" />
+            </div>
           </div>
         </div>
         <ContactComponent />
@@ -49,7 +64,7 @@ export default function HomePage({products, banners}:HomeProps ) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const responseProducts = await GetProductsHome(ctx);  
+  const responseProducts = await GetProductsHome(ctx);
   const banners = await api.get<Banner[]>(`/component/banners/GetAll`);
 
   if (!banners || !responseProducts) {

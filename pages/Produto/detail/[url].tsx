@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import Head from "next/head";
 import { GetServerSideProps } from "next";
-import Head from 'next/head'
-
-import { GetProduct, ProductDetail } from "src/services/shop/get";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Layout } from "components/layout";
 import {
@@ -11,13 +9,22 @@ import {
   BreadCrumbComponent,
   NextImage,
 } from "components/data/components";
-import { ProductShowCase } from "components/sections/shop-detail/carousel";
+import {
+  Benefits,
+  GetProduct,
+  GetProducts,
+  GetProductsCats,
+  GetProductsDogs,
+  GetProductsHome,
+  ProductDetail,
+  ProductListItem,
+  ProductProps,
+} from "src/services/shop/get";
+import TabsSectionComponent from "components/sections/produto-detalhe/tabs";
+import { DestaquesProdutosComponent } from "components/layout/DestaquesProdutos";
+import { BenefitsComponent } from "components/sections/produto-detalhe/benefits-carousel";
 
 import * as S from "styles/pages/shop-detail";
-import { BenefitsComponent } from "components/sections/produto-detalhe/benefits-carousel";
-import { BenefitsItem } from "components/data/benefits-card";
-import { Tabela } from "components/sections/produto-detalhe/tabela";
-import TabsSectionComponent from "components/sections/produto-detalhe/tabs";
 
 // interface VariationProps {
 //   id: number;
@@ -30,15 +37,16 @@ import TabsSectionComponent from "components/sections/produto-detalhe/tabs";
 
 interface DetailProductPageProps {
   data: ProductDetail;
-  benefits: BenefitsItem[];
-  listTabs: ProductDetail;
+  benefits: Benefits[];
+  productsDogs: ProductProps;
+  productsCats: ProductProps;
 }
 
 export default function DetailProductPage({
-  data: { detail, head },
-  listTabs,
-
+  data: { detail, head, product },
   benefits,
+  productsDogs,
+  productsCats,
 }: DetailProductPageProps) {
   const breadCrumbProduct = [
     {
@@ -51,59 +59,59 @@ export default function DetailProductPage({
     },
   ];
 
-  const listBenefitsSubstituir: BenefitsItem[] = [
-    {
-      id: 1,
-      icon: "/images/icon-benefits-1.png",
-      title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
-      subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-    },
-    {
-      id: 2,
-      icon: "/images/icon-benefits-1.png",
-      title: "SISTEMA URINÁRIO SAUDÁVEL",
-      subTitle: "Equilíbrio do pH urinário",
-    },
-    {
-      id: 3,
-      icon: "/images/icon-benefits-1.png",
-      title: "TAURINA",
-      subTitle: "Essencial para a saúde cardíaca e para a visão",
-    },
-    {
-      id: 4,
-      icon: "/images/icon-benefits-1.png",
-      title: "COMBATE DOS RADICAIS LIVRES",
-      subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-    },
-    {
-      id: 5,
-      icon: "/images/icon-benefits-1.png",
-      title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
-      subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-    },
-  ];
+  // const listBenefitsSubstituir: Benefits = [
+  //   {
+  //     id: 1,
+  //     icon: "/images/icon-benefits-1.png",
+  //     title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
+  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
+  //   },
+  //   {
+  //     id: 2,
+  //     icon: "/images/icon-benefits-1.png",
+  //     title: "SISTEMA URINÁRIO SAUDÁVEL",
+  //     subTitle: "Equilíbrio do pH urinário",
+  //   },
+  //   {
+  //     id: 3,
+  //     icon: "/images/icon-benefits-1.png",
+  //     title: "TAURINA",
+  //     subTitle: "Essencial para a saúde cardíaca e para a visão",
+  //   },
+  //   {
+  //     id: 4,
+  //     icon: "/images/icon-benefits-1.png",
+  //     title: "COMBATE DOS RADICAIS LIVRES",
+  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
+  //   },
+  //   {
+  //     id: 5,
+  //     icon: "/images/icon-benefits-1.png",
+  //     title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
+  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
+  //   },
+  // ];
 
-  const tabela = [
-    {
-      id: 1,
-      titulo: "Umidade (máx.)",
-      items: [" 100 g/kg", "10%", "10%"],
-    },
-  ];
+  // const tabela = [
+  //   {
+  //     id: 1,
+  //     titulo: "Umidade (máx.)",
+  //     items: [" 100 g/kg", "10%", "10%"],
+  //   },
+  // ];
 
-  const tabela2 = [
-    {
-      id: 1,
-      titulo: "Umidade (máx.)",
-      items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
-    },
-    {
-      id: 2,
-      titulo: "teste",
-      items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
-    },
-  ];
+  // const tabela2 = [
+  //   {
+  //     id: 1,
+  //     titulo: "Umidade (máx.)",
+  //     items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
+  //   },
+  //   {
+  //     id: 2,
+  //     titulo: "teste",
+  //     items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
+  //   },
+  // ];
 
   return (
     <Layout>
@@ -116,7 +124,7 @@ export default function DetailProductPage({
           <div className="show-mobile">
             <BreadCrumbComponent list={breadCrumbProduct} />
           </div>
-          
+
           <Container>
             <div className="box-image">
               <div className="bg-green"></div>
@@ -162,11 +170,23 @@ export default function DetailProductPage({
           </Container>
         </section>
 
-        {/* <BenefitsComponent listBenefits={listBenefits} /> */}
+        <BenefitsComponent listBenefits={benefits} />
 
-        <BenefitsComponent listBenefits={listBenefitsSubstituir} />
+        <TabsSectionComponent product={detail} />
 
-        <TabsSectionComponent product={detail}  />
+        {/* {detail.categoryTitle.includes("Gatos") ? (
+          <DestaquesProdutosComponent
+            title="Produtos ralacionados"
+            listProducts={productsCats.items}
+          />
+        ): ""}
+
+        {detail.categoryTitle.includes("Cães") ? (
+          <DestaquesProdutosComponent
+            title="Produtos ralacionados"
+            listProducts={productsDogs.items}
+          />
+        ) : ""} */}
       </S.ShopDetail>
     </Layout>
   );
@@ -174,8 +194,10 @@ export default function DetailProductPage({
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const response = await GetProduct(ctx);
+  const responseProductsDogs = await GetProductsDogs(ctx);
+  const responseProductsCats = await GetProductsCats(ctx);
 
-  if (response === undefined) {
+  if (response === undefined || responseProductsDogs === undefined || responseProductsCats === undefined) {
     return {
       notFound: true,
       props: {},
@@ -185,6 +207,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return {
     props: {
       data: response,
+      productsDogs: responseProductsDogs || null,
+      productsCats: responseProductsCats || null,
     },
   };
 };
