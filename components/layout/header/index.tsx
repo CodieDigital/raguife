@@ -29,23 +29,22 @@ export function HeaderComponent() {
             X
           </div>
 
-          <nav className="link-1-bold">
+          <nav className="link-1-regular">
             <Link href="/" passHref>
               <a href="replaced">Home</a>
             </Link>
 
             <Link href={"/quem-somos"} passHref>
-              <a href="replaced" className="link-1-bold">
-                quem somos
+              <a href="replaced" >
+                Quem somos
               </a>
             </Link>
 
             <div className={`dropdown ${dropdown ? "active" : ""}`}>
               <span
-                className="link-1-bold"
                 onClick={() => setdropdown(!dropdown)}
               >
-                <span>produtos</span>
+                <span>Produtos</span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,22 +68,22 @@ export function HeaderComponent() {
 
               <div className="subMenu">
                 <Link href={"/produtos/para-caes"} passHref>
-                  <a href="replaced" className="link-1-medium">
-                    para cães
+                  <a href="replaced" >
+                    Para cães
                   </a>
                 </Link>
 
                 <Link href={"/produtos/para-gatos"} passHref>
-                  <a href="replaced" className="link-1-medium">
-                    para gatos
+                  <a href="replaced" >
+                    Para gatos
                   </a>
                 </Link>
               </div>
             </div>
 
             <Link href={"/contato"} passHref>
-              <a href="replaced" className="link-1-bold">
-                contato
+              <a href="replaced">
+                Contato
               </a>
             </Link>
           </nav>

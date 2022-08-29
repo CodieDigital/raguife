@@ -24,9 +24,7 @@ interface BannerProps {
 export const BannerComponent = ({ listBanners }: BannerProps) => {
   const [heightHeader, setHeightHeader] = useState("");
 
-  const products = useRef(null);
-
-  const scrollToSection = () => 
+  const scrollToSection = () =>
     window.scrollTo({
       top: 945,
       behavior: "smooth",
@@ -57,7 +55,10 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
 
           <Container>
             <div className="invisble"></div>
-            <div className="scroll link-1-regular" onClick={() => scrollToSection()}>
+            <div
+              className="scroll link-1-regular"
+              onClick={() => scrollToSection()}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"

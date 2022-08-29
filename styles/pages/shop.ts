@@ -178,7 +178,11 @@ export const Shop = styled.main`
       }
 
       h3 {
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 14px;
       }
     }
   }

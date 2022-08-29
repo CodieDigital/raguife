@@ -4,7 +4,7 @@ export const CardProduct = styled.div`
   width: 100%;
 
   .image {
-    aspect-ratio: 229/319!important;
+    aspect-ratio: 300/319!important;
     max-width: 300px;
     margin: 0 auto;
     display: block;
@@ -18,7 +18,7 @@ export const CardProduct = styled.div`
   }
 
   .image + * {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .text {

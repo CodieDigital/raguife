@@ -68,6 +68,7 @@ export const Header = styled.header`
           svg {
             stroke: #fff;
             transform: rotate(90deg);
+            transition: all 0.4s;
           }
 
           .subMenu {
@@ -77,7 +78,7 @@ export const Header = styled.header`
 
         .dropdown.active {
           svg {
-            transform: rotate(0);
+            transform: rotate(-90deg);
           }
 
           .subMenu {
