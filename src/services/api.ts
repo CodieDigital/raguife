@@ -2,9 +2,9 @@ import axios from "axios";
 // import { parseCookies } from "nookies";
 
 const apiURL = "http://apiraguife.codie.com.br.144-208-108-40.ph105.peopleshostshared.com";
-const baseImage = "http://painel.reguife.com.br.144-208-108-40.ph105.peopleshostshared.com/uploads/";
-const baseImageGallery = "http://apiraguife.codie.com.br.144-208-108-40.ph105.peopleshostshared.com/imagens/Products/";
-const baseVideo = "http://apiraguife.codie.com.br.144-208-108-40.ph105.peopleshostshared.com/uploads/videos/"
+const baseImage = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com//uploads/";
+const baseImageGallery = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/imagens/Products/";
+const baseVideo = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com//uploads/videos/"
 
 export function getAPIClient(ctx?: any) {
   // const { "auth.token": token } = parseCookies(ctx);

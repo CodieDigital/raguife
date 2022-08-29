@@ -252,6 +252,14 @@ export const Header = styled.header`
     .logo {
       max-width: 175px;
     }
+
+    .box-right {
+      .dropdown {
+        .subMenu {
+          bottom: 17px;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1400px) {
@@ -260,6 +268,14 @@ export const Header = styled.header`
     .logo {
       max-width: 155px;
     }
+
+    .box-right {
+      .dropdown {
+        .subMenu {
+          bottom: 21px;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1200px) {
@@ -267,6 +283,14 @@ export const Header = styled.header`
 
     .logo {
       max-width: 140px;
+    }
+
+    .box-right {
+      .dropdown {
+        .subMenu {
+          bottom: 26px;
+        }
+      }
     }
   }
 

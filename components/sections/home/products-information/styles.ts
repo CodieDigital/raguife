@@ -110,7 +110,7 @@ export const ProductInformation = styled.section`
     }
 
     a:hover {
-      background-color: var(--secundary-color);
+      background-color: var(--tertiary-color);
     }
   }
 

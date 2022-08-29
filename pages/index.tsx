@@ -29,6 +29,7 @@ interface HomeProps {
 }
 
 export default function HomePage({ products, banners }: HomeProps) {
+
   return (
     <Layout>
       <S.HomePage>

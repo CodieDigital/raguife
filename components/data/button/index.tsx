@@ -25,7 +25,7 @@ export function ButtonComponent({
       $loading={loading}
     >
       {href && !type ? (
-        <Link href={href}>
+        <Link href={href} passHref>
           <a href="replace" className="link-2-medium" style={{pointerEvents: props.disabled ? "none" : "all"}} {...props}>
           {loading ? <LoaderCircle size={40} /> : text}
           </a>

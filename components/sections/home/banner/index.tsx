@@ -4,7 +4,7 @@ import { ButtonComponent } from "components/data/button";
 import { Container } from "components/data/container";
 
 import * as S from "./styles";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NextImage } from "components/data/NextImage";
 import { baseImage } from "src/services/api";
 
@@ -23,6 +23,14 @@ interface BannerProps {
 
 export const BannerComponent = ({ listBanners }: BannerProps) => {
   const [heightHeader, setHeightHeader] = useState("");
+
+  const products = useRef(null);
+
+  const scrollToSection = () => 
+    window.scrollTo({
+      top: 945,
+      behavior: "smooth",
+    });
 
   useEffect(() => {
     if (process.browser) {
@@ -49,25 +57,21 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
 
           <Container>
             <div className="invisble"></div>
-            <div>
-              <Link href={"#produtos"} passHref>
-                <a href="replaced" className="scroll link-1-regular">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="20"
-                    viewBox="0 0 14 20"
-                  >
-                    <g>
-                      <g>
-                        <path d="M13.242 12.78a.919.919 0 0 0-1.293-.008L7.667 17.04V.777a.91.91 0 0 0-.914-.907.91.91 0 0 0-.914.907V17.04l-4.282-4.275a.925.925 0 0 0-1.294.007.91.91 0 0 0 .007 1.287l5.836 5.794c.084.077.176.14.288.19a.916.916 0 0 0 .991-.19l5.836-5.794a.896.896 0 0 0 .022-1.28z" />
-                      </g>
-                    </g>
-                  </svg>
+            <div className="scroll link-1-regular" onClick={() => scrollToSection()}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="20"
+                viewBox="0 0 14 20"
+              >
+                <g>
+                  <g>
+                    <path d="M13.242 12.78a.919.919 0 0 0-1.293-.008L7.667 17.04V.777a.91.91 0 0 0-.914-.907.91.91 0 0 0-.914.907V17.04l-4.282-4.275a.925.925 0 0 0-1.294.007.91.91 0 0 0 .007 1.287l5.836 5.794c.084.077.176.14.288.19a.916.916 0 0 0 .991-.19l5.836-5.794a.896.896 0 0 0 .022-1.28z" />
+                  </g>
+                </g>
+              </svg>
 
-                  <span>saiba mais</span>
-                </a>
-              </Link>
+              <span>saiba mais</span>
             </div>
           </Container>
         </React.Fragment>

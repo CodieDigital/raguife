@@ -233,7 +233,7 @@ export default function SobrePage() {
                   0: {
                     slidesPerView: 1,
                   },
-                  680: {
+                  768: {
                     slidesPerView: 2,
                   },
                   901: {

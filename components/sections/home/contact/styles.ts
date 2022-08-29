@@ -41,6 +41,10 @@ export const ContactStyle = styled.section<ContactProps>`
     max-width: 262px;
   }
 
+  button:hover {
+    background-color:var(--red-color);
+  }
+
   .input-content,
   .textarea-content {
     display: flex;

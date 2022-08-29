@@ -293,6 +293,23 @@ export const Sobre = styled.section`
         row-gap: 45px;
       }
     }
+
+    .beneficios {
+      padding: 70px 0;
+    }
+
+    .tradicao {
+      padding: 70px 0 80px;
+
+      .image {
+        max-width: 400px;
+      }
+
+      .bt {
+        max-width: 250px;
+        height: 44px;
+      }
+    }
   }
 
   @media only screen and (max-width: 1400px) {
@@ -347,6 +364,31 @@ export const Sobre = styled.section`
 
       .grid-nutricao {
         row-gap: 35px;
+      }
+    }
+
+    .beneficios {
+      padding: 60px 0;
+    }
+
+    .tradicao {
+      padding: 55px 0 65px;
+
+      h2 {
+        max-width: 740px;
+      }
+
+      h2 + * {
+        margin-top: 28px;
+      }
+
+      .image {
+        max-width: 370px;
+      }
+
+      .bt {
+        max-width: 235px;
+        height: 41px;
       }
     }
   }
@@ -409,6 +451,35 @@ export const Sobre = styled.section`
         h4 {
           font-size: 14px;
         }
+      }
+    }
+
+    .beneficios {
+      padding: 60px 0;
+    }
+
+    .tradicao {
+      padding: 45px 0 55px;
+
+      h2 {
+        max-width: 675px;
+      }
+
+      h2 + * {
+        margin-top: 23px;
+      }
+
+      .image {
+        max-width: 345px;
+      }
+
+      .image + * {
+        margin-top: 35px;
+      }
+
+      .bt {
+        max-width: 225px;
+        height: 38px;
       }
     }
   }
@@ -496,20 +567,25 @@ export const Sobre = styled.section`
     }
 
     .beneficios {
+      padding: 50px 0;
+
       .hide-mobile {
         display: none;
       }
 
       .box-beneficios {
-        max-width: 240px;
+        max-width: 260px;
         margin: 0 auto;
+        gap: 9px;
+        justify-content: center;
 
         img {
-          max-width: 45px;
+          max-width: 40px;
         }
 
-        h4 {
-          font-size: 13px;
+        h4,
+        p {
+          font-size: 12px;
         }
       }
 
@@ -522,16 +598,43 @@ export const Sobre = styled.section`
       .swiper-button-next {
         right: 0;
         color: #fff;
+        justify-content: flex-end;
       }
 
       .swiper-button-prev {
         left: 0;
         color: #fff;
+        justify-content: flex-start;
       }
 
       .swiper-button-prev::after,
       .swiper-button-next::after {
         font-size: 25px;
+      }
+    }
+
+    .tradicao {
+      padding: 35px 0 45px;
+
+      h2 {
+        max-width: 610px;
+      }
+
+      h2 + * {
+        margin-top: 20px;
+      }
+
+      .image {
+        max-width: 310px;
+      }
+
+      .image + * {
+        margin-top: 31px;
+      }
+
+      .bt {
+        max-width: 210px;
+        height: 35px;
       }
     }
   }
@@ -605,6 +708,44 @@ export const Sobre = styled.section`
 
       h2 {
         font-size: 20px;
+      }
+    }
+
+    .beneficios {
+      padding: 35px 0;
+
+      .container {
+        max-width: 380px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .tradicao {
+      padding: 25px 0 35px;
+
+      h2 {
+        max-width: 435px;
+      }
+
+      h2 + * {
+        margin-top: 17px;
+      }
+
+      .image {
+        max-width: 265px;
+      }
+
+      .image + * {
+        margin-top: 28px;
+      }
+
+      .bt {
+        max-width: 200px;
+        height: 32px;
       }
     }
   }
@@ -684,6 +825,31 @@ export const Sobre = styled.section`
         font-size: 20px;
       }
     }
+
+    .tradicao {
+      padding: 18px 0 23px;
+
+      h2 {
+        max-width: 395px;
+      }
+
+      h2 + * {
+        margin-top: 14px;
+      }
+
+      .image {
+        max-width: 210px;
+      }
+
+      .image + * {
+        margin-top: 22px;
+      }
+
+      .bt {
+        max-width: 175px;
+        height: 29px;
+      }
+    }
   }
 
   @media only screen and (max-width: 400px) {
@@ -726,6 +892,63 @@ export const Sobre = styled.section`
           font-size: 12px;
         }
       }
+    }
+
+    .beneficios {
+      padding: 20px 0;
+
+      .box-beneficios {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h4 {
+          max-width: 200px;
+          margin: 0 auto;
+        }
+
+        p {
+          max-width: 180px;
+          margin: 0 auto;
+          font-size: 11px;
+        }
+
+        img {
+          max-width: 37px;
+        }
+      }
+
+      .container {
+        max-width: 320px;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        font-size: 18px;
+      }
+    }
+
+    .tradicao {
+      padding: 18px 0 23px;
+
+      h2 {
+        font-size: 17px;
+        max-width: 300px;
+      }
+
+      h2 + * {
+        margin-top: 14px;
+      }
+
+      .image {
+        max-width: 170px;
+      }
+
+      .image + * {
+        margin-top: 22px;
+      }
+
     }
   }
 `;

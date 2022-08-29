@@ -11,7 +11,7 @@ export function Extra2({ detail }: DescricaoProps) {
   return (
     <S.TabContent>
       <div className="content paragraph-1-regular">
-        <div
+        <div className="table1"
           dangerouslySetInnerHTML={{
             __html: detail.extra2
               ? detail.extra2
