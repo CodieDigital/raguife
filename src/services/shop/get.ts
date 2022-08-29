@@ -147,7 +147,7 @@ export async function GetProductsDogs(
   router: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
 ) {
   if (router) {
-    const { data } = await api.get<ProductProps>(`/Produto/list/para-dogs`);
+    const { data } = await api.get<ProductProps>(`/Produto/list/para-caes`);
 
     if (data) {
       return data;

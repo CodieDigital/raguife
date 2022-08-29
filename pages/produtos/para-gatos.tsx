@@ -59,13 +59,6 @@ export default function ShopDogPage({ products, categories }: ShopPageProps) {
             <Container>
               <h2 className="title-2-bold">Produtos para Gatos</h2>
 
-              {/* <FilterBy
-                listFilters={categories}
-                router={router}
-                routerBuild={routerBuild}
-                setFilterMobile={setFilterMobile}
-              /> */}
-
               <FilterBy
                 listFilters={categories}
                 router={router}
@@ -91,10 +84,6 @@ export default function ShopDogPage({ products, categories }: ShopPageProps) {
                     />
                   );
                 })}
-
-                {/* {listaprodutos2.map((product: ProductListItem) => (
-                  <CardProductComponent key={product.id} card={product} />
-                ))} */}
               </div>
 
               {products.items.length === 0 && (

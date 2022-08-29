@@ -174,19 +174,17 @@ export default function DetailProductPage({
 
         <TabsSectionComponent product={detail} />
 
-        {/* {detail.categoryTitle.includes("Gatos") ? (
-          <DestaquesProdutosComponent
-            title="Produtos ralacionados"
-            listProducts={productsCats.items}
-          />
-        ): ""}
-
-        {detail.categoryTitle.includes("Cães") ? (
-          <DestaquesProdutosComponent
+        {detail.url.includes("caes") ? (
+          <DestaquesProdutosComponent key={detail.id}
             title="Produtos ralacionados"
             listProducts={productsDogs.items}
           />
-        ) : ""} */}
+        ) : (
+          <DestaquesProdutosComponent key={detail.id}
+            title="Produtos ralacionados"
+            listProducts={productsCats.items}
+          />
+        )}
       </S.ShopDetail>
     </Layout>
   );
@@ -197,7 +195,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const responseProductsDogs = await GetProductsDogs(ctx);
   const responseProductsCats = await GetProductsCats(ctx);
 
-  if (response === undefined || responseProductsDogs === undefined || responseProductsCats === undefined) {
+  console.log(responseProductsDogs)
+
+  if (
+    response === undefined ||
+    responseProductsDogs === undefined ||
+    responseProductsCats === undefined
+  ) {
     return {
       notFound: true,
       props: {},
