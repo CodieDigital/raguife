@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { GetServerSideProps } from "next";
 
+import Head from "next/head";
 import { useRouter } from "next/router";
+import { GetServerSideProps } from "next";
+import React, { useEffect, useState } from "react";
 
 import {
   GetProducts,
@@ -53,17 +54,22 @@ export default function ShopDogPage({ products, categories }: ShopPageProps) {
 
   return (
     <Layout>
+      <Head>
+        <title>Para cães</title>
+        <meta name="description" content="Produtos Raguife para cães" />
+      </Head>
+
       <S.Shop>
         <div className="shop-content">
           <div className="top">
             <Container>
               <h2 className="title-2-bold">Produtos para cães</h2>
 
-              <FilterBy
+              {/* <FilterBy
                 listFilters={categories}
                 router={router}
                 routerBuild={routerBuild}
-              />
+              /> */}
 
               <img
                 className="absolute-image"

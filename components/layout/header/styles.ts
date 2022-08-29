@@ -8,7 +8,7 @@ export const Header = styled.header`
   padding: 18px 0 15px;
   z-index: 99;
   background-color: var(--primary-color);
-  
+
   .menu-mobile {
     position: fixed;
     height: 100vh;
@@ -55,7 +55,7 @@ export const Header = styled.header`
         span {
           color: #fff;
           cursor: pointer;
-          font-size: 18px;
+          font-size: inherit;
         }
 
         .dropdown {
@@ -69,6 +69,8 @@ export const Header = styled.header`
             stroke: #fff;
             transform: rotate(90deg);
             transition: all 0.4s;
+            width: 6px;
+            height: 10px;
           }
 
           .subMenu {
@@ -170,6 +172,8 @@ export const Header = styled.header`
       a,
       span {
         color: #fff;
+        position: relative;
+        z-index: 5;
       }
 
       a:hover {
@@ -329,6 +333,16 @@ export const Header = styled.header`
           padding-top: 20px;
           margin-top: 15px;
           gap: 10px;
+        }
+
+        nav {
+          .dropdown.active {
+            .subMenu {
+              a {
+                font-size: 13px;
+              }
+            }
+          }
         }
       }
 

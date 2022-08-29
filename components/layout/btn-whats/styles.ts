@@ -12,6 +12,8 @@ export const ButtonWhatsComponent = styled.div`
     display: flex;
     fill: #fff;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
 
     img {
       width: 100%;
@@ -65,7 +67,7 @@ export const ButtonWhatsComponent = styled.div`
 
   @media only screen and (max-width: 768px) {
     right: 14px;
-    bottom: 25px;
+    bottom: 14px;
 
     a {
       max-width: 50px;
@@ -74,6 +76,9 @@ export const ButtonWhatsComponent = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
+    right: 12px;
+    bottom: 12px;
+
     a {
       max-width: 45px;
       height: 45px;

@@ -9,7 +9,7 @@ interface DescricaoProps {
 
 export function Extra2({ detail }: DescricaoProps) {
   return (
-    <S.TabContent>
+    <S.TabContent key={detail.extra2}>
       <div className="content paragraph-1-regular">
         <div className="table1"
           dangerouslySetInnerHTML={{

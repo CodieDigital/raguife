@@ -68,13 +68,13 @@ export function HeaderComponent() {
 
               <div className="subMenu">
                 <Link href={"/produtos/para-caes"} passHref>
-                  <a href="replaced" >
+                  <a href="replaced" className="link-2-regular">
                     Para cães
                   </a>
                 </Link>
 
                 <Link href={"/produtos/para-gatos"} passHref>
-                  <a href="replaced" >
+                  <a href="replaced" className="link-2-regular">
                     Para gatos
                   </a>
                 </Link>

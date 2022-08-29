@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Footer = styled.footer`
   background-color: var(--primary-color);
-  padding: 70px 0 12px;
+  padding: 70px 0 70px;
 
   .links-contato {
     margin-bottom: 0;
@@ -16,10 +16,6 @@ export const Footer = styled.footer`
   .top-content {
     display: flex;
     justify-content: space-between;
-  }
-
-  .top-content + * {
-    margin-top: 60px;
   }
 
   .redes-sociais + * {
@@ -79,26 +75,8 @@ export const Footer = styled.footer`
     }
   }
 
-  .barra-codie {
-    color: #fff;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      max-height: 21px;
-      object-fit: contain;
-    }
-  }
-
   @media only screen and (max-width: 1600px) {
-    padding: 55px 0 12px;
-
-    .top-content + * {
-      margin-top: 45px;
-    }
+    padding: 55px 0 65px;
 
     .logo-pets {
       max-width: 230px;
@@ -106,11 +84,7 @@ export const Footer = styled.footer`
   }
 
   @media only screen and (max-width: 1400px) {
-    padding: 45px 0 12px;
-
-    .top-content + * {
-      margin-top: 35px;
-    }
+    padding: 45px 0 60px;
 
     .logo-pets {
       max-width: 190px;
@@ -146,7 +120,7 @@ export const Footer = styled.footer`
   }
 
   @media only screen and (max-width: 1200px) {
-    padding: 35px 0 11px;
+    padding: 35px 0 55px;
 
     .logo-pets {
       max-width: 160px;
@@ -172,17 +146,13 @@ export const Footer = styled.footer`
       }
     }
 
-    .top-content + * {
-      margin-top: 30px;
-    }
-
     .redes-sociais {
       gap: 13px;
     }
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 25px 0 10px;
+    padding: 25px 0 40px;
 
     .logo {
       gap: 15px;
@@ -219,14 +189,10 @@ export const Footer = styled.footer`
         justify-content: center;
       }
     }
-
-    .top-content + * {
-      margin-top: 25px;
-    }
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 20px 0 10px;
+    padding: 20px 0 35px;
 
     .logo-ceo {
       max-width: 75px;

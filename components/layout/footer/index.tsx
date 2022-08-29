@@ -23,35 +23,35 @@ export function FooterComponent() {
 
             <Link href={"/"} passHref>
               <a href="replaced" className="link-2-regular">
-                home
+                Home
               </a>
             </Link>
 
             <Link href={"/quem-somos"} passHref>
               <a href="replaced" className="link-2-regular">
-                quem somos
+                Quem somos
               </a>
             </Link>
 
             <Link href={"/contato"} passHref>
               <a href="replaced" className="link-2-regular">
-                contato
+                Contato
               </a>
             </Link>
           </div>
 
           <div className="links hide-mobile">
-            <h3 className="link-2-medium uppercase">produtos</h3>
+            <h3 className="link-2-medium uppercase">Produtos</h3>
 
             <Link href={"/produtos/para-caes"} passHref>
               <a href="replaced" className="link-2-regular">
-                para cães
+                Para cães
               </a>
             </Link>
 
             <Link href={"/produtos/para-gatos"} passHref>
               <a href="replaced" className="link-2-regular">
-                para gatos
+                Para gatos
               </a>
             </Link>
           </div>
@@ -73,12 +73,6 @@ export function FooterComponent() {
               <img src="/images/logo-ambar.png" alt="Logo Ambar" />
             </a>
           </div>
-        </div>
-
-        <div className="barra-codie">
-          <span className="paragraph-2-regular">Desenvolvido por</span>
-
-          <img src="/images/logo-codie.png" alt="Logo codie" />
         </div>
       </Container>
     </S.Footer>

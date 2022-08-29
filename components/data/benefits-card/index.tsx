@@ -14,15 +14,15 @@ export function BenefitsCard({ cardBenefits }: BenefitsCardProps) {
 
   return (
     <S.BenefitsCard>
-      <React.Fragment key={cardBenefits.id + cardBenefits.title}>
+      <React.Fragment key={cardBenefits.id + cardBenefits.titulo}>
         <div className="image">
-          <NextImage layout="fill" src={cardBenefits.icon} />
+          <NextImage layout="fill" src={cardBenefits.imagem} isBaseUrl/>
         </div>
 
         <div className="text">
-          <h3 className="title-6-medium">{cardBenefits.title}</h3>
+          <h3 className="title-6-medium">{cardBenefits.titulo}</h3>
 
-          <p className="paragraph-2-regular">{cardBenefits.subTitle}</p>
+          <p className="paragraph-2-regular">{cardBenefits.subTitulo}</p>
         </div>
       </React.Fragment>
     </S.BenefitsCard>

@@ -6,7 +6,7 @@ interface DescricaoProps {
 }
 export function DescricaoComponent({ detail }: DescricaoProps) {
   return (
-    <S.TabContent>
+    <S.TabContent key={detail.descricao}>
       <div className="content paragraph-1-regular">
         <p>
           <strong>Sinopse:</strong>

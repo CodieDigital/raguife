@@ -6,10 +6,10 @@ import { ParsedUrlQuery } from "querystring";
 export interface ProductListItem {
   id: number;
   titulo: string;
-  subtitulo: string;
-  imagem: string;
+  subtitulo?: string;
+  imagem?: string;
   url: string;
-  categoriaTitle: string;
+  categoriaTitle?: string;
 }
 
 export interface Product {
@@ -25,6 +25,7 @@ export interface Product {
   extra2: string;
   extra3: string;
   extra4: string;
+  extra5:string
 
   //preciso receber
   categoryTitle: string; //para breadcrumb
@@ -61,15 +62,15 @@ export interface Imagem {
 
 export interface Benefits {
   id: number;
-  icon: string;
-  title: string;
-  subTitle: string;
+  imagem: string;
+  titulo: string;
+  subTitulo: string;
 }
 
 export interface ProductDetail {
   detail: Product;
   head: HeadPage;
-  benefit: Benefits[];
+  badges: Benefits[];
   product:ProductListItem,
 }
 
@@ -106,6 +107,8 @@ export async function GetProducts(
       )}`
     );
 
+    console.log(data)
+
     if (data) {
       return data;
     }
@@ -119,6 +122,8 @@ export async function GetProductsHome(
 ) {
   if (router) {
     const { data } = await api.get<ProductProps>(`/Produto/list/GetAll`);
+
+    console.log(data)
 
     if (data) {
       return data;

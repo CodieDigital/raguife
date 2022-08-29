@@ -24,7 +24,6 @@ export function DestaquesProdutosComponent({
         <Swiper
           navigation={true}
           slidesPerView={3}
-          loop
           className={"swiper-produtos"}
           breakpoints={{
             0: {
@@ -53,11 +52,9 @@ export function DestaquesProdutosComponent({
         >
           {listProducts.map((card) => {
             return (
-              <React.Fragment key={card.id + card.titulo}>
-                <SwiperSlide>
-                  <CardProductComponent card={card} />
-                </SwiperSlide>
-              </React.Fragment>
+              <SwiperSlide key={card.id + card.url + "1"}>
+                <CardProductComponent card={card} />
+              </SwiperSlide>
             );
           })}
         </Swiper>

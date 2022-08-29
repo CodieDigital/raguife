@@ -1,6 +1,7 @@
-import { BreadCrumbComponent } from "components/data/breadcrumb";
-import { Container } from "components/data/container";
 import { Layout } from "components/layout";
+import { Container } from "components/data/container";
+import { BreadCrumbComponent } from "components/data/breadcrumb";
+
 
 import * as S from "styles/pages/contact";
 

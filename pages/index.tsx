@@ -68,6 +68,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const responseProducts = await GetProductsHome(ctx);
   const banners = await api.get<Banner[]>(`/component/banners/GetAll`);
 
+  console.log(banners)
+
   if (!banners || !responseProducts) {
     return {
       props: {

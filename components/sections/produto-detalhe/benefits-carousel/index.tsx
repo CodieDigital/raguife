@@ -12,6 +12,7 @@ interface BenefitsSwiperlProps {
 }
 
 export function BenefitsComponent({ listBenefits }: BenefitsSwiperlProps) {
+  console.log(listBenefits)
   return (
     <S.BenefitsComponent>
       <Container>

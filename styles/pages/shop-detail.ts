@@ -51,6 +51,14 @@ export const ShopDetail = styled.main`
       width: 100%;
       padding-top: 7%;
 
+      .transform {
+        text-transform: lowercase;
+      }
+
+      .transform::first-letter {
+        text-transform: uppercase;
+      }
+
       .breadcrumb {
         li {
           a,

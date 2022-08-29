@@ -1,12 +1,27 @@
-import { ButtonComponent } from "components/data/button";
-import { Container } from "components/data/container";
-import { Layout } from "components/layout";
+import Head from "next/head";
+import { GetServerSideProps } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { api } from "src/services/api";
+import { PageInformationProps } from "src/interfaces/informationsPage";
+
+import { Layout } from "components/layout";
+import { Container } from "components/data/container";
+
 import * as S from "../styles/pages/quem-somos";
 
-export default function SobrePage() {
+interface InformationPageProps {
+  information: PageInformationProps;
+}
+
+export default function SobrePage({information}:InformationPageProps) {
   return (
     <Layout>
+      <Head>
+        <title>{information.head.pageTitle}</title>
+        <meta name="description" content={information.head.metaDescription}/>
+      </Head>
+      
       <S.Sobre>
         <div className="banner-sobre">
           <div className="text-image">
@@ -580,3 +595,14 @@ export default function SobrePage() {
     </Layout>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const informationsPage = await api.get<PageInformationProps>("pages/quem-somos");
+
+  return {
+    props: {
+      information: informationsPage.data
+    }
+  }
+}
+

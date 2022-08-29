@@ -87,8 +87,8 @@ export function ContactComponent({ linksContato }: ContatoProps) {
         <h4 className="title-6-regular uppercase">Envie uma mensagem</h4>
 
         <h3 className="title-4-bold title">Entre em contato</h3>
-       
-      {linksContato && <LinksContato icon/>}
+
+        {linksContato && <LinksContato icon />}
 
         <Form method="post" ref={formRef} onSubmit={handleSubmit}>
           <InputComponent
@@ -107,13 +107,17 @@ export function ContactComponent({ linksContato }: ContatoProps) {
             placeholder="Digite seu e-mail aqui"
           />
 
-          <InputComponent
-            id="phone"
-            name="phone"
-            type="text"
-            placeholder="(DDD) 00000 - 0000"
-            label="Telefone"
-          />
+          <div className="input-content phone">
+            <label className="label-text paragraph-2-bold" htmlFor={"phone"}>Telefone</label>
+            
+            <InputComponent
+              id="phone"
+              name="phone"
+              type="text"
+              mask="(99) 99999-9999"
+              placeholder="(DDD) 00000 - 0000"
+            />
+          </div>
 
           <TextAreaComponent
             label="Mensagem"

@@ -5,7 +5,7 @@ interface ContactProps {
 }
 
 export const ContactStyle = styled.section<ContactProps>`
-  background-image: url("../images/contato-home.jpg");
+  background-image: url("/images/contato-home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

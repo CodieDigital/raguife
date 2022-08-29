@@ -111,6 +111,14 @@ export const TabContent = styled.section`
     p {
       line-height: 27px;
     }
+
+    .table1 {
+      table {
+        td:first-child {
+          max-width: 300px;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1200px) {
@@ -119,6 +127,14 @@ export const TabContent = styled.section`
     p {
       line-height: 25px;
     }
+
+    .table1 {
+      table {
+        td:first-child {
+          max-width: 275px;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1024px) {
@@ -126,6 +142,40 @@ export const TabContent = styled.section`
 
     p {
       line-height: 24px;
+    }
+
+    table::-webkit-scrollbar {
+      width: 20px;
+      height: 7px;
+    }
+
+    table::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    table::-webkit-scrollbar-thumb {
+      background: var(--secundary-color);
+    }
+
+    table::-webkit-scrollbar-thumb:hover {
+      background: var(--secundary-color);
+    }
+
+    .table1 {
+      table {
+        max-width: 1000px;
+        width: 100%;
+        overflow-x: auto;
+
+        td:first-child {
+          max-width: 325px;
+        }
+      }
+
+      tbody {
+        width: 1000px;
+        overflow-x: auto;
+      }
     }
   }
 
@@ -154,6 +204,12 @@ export const TabContent = styled.section`
 
     p {
       line-height: 21px;
+    }
+
+    .table1 {
+      table {
+        border-radius: 5px;
+      }
     }
   }
 

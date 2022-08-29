@@ -8,7 +8,7 @@ export const RedesSocias = styled.div`
         display: flex;
         align-items: center;
         transition: .3s;
-
+        margin-top: 0!important;
         
     }
 

@@ -3,7 +3,7 @@ import * as S from "./styles";
 export function ButtonWhats() {
   return (
     <S.ButtonWhatsComponent>
-      <a href="">
+      <a target={"_blank"} href="https://api.whatsapp.com/send?phone=551736314347&text=Bem%20vindos%20a%20Raguife%2C%20como%20podemos%20ajudar%20%3F">
         {/* <img src="/images/button-whats.png" alt="" /> */}
 
         <svg
@@ -44,7 +44,7 @@ export function ButtonWhats() {
                       mask='url("#5f08b")'
                     />
                     <path
-                      fill-opacity=".16"
+                      fillOpacity=".16"
                       d="M45.779 2.195c-21.107 0-38.22 16.979-38.22 37.925 0 5.73 1.282 11.163 3.733 16.345.251.532-.69 4.685-7.292 25.517 21.648-6.454 25.96-7.32 26.659-7.015 4.393 1.923 9.62 3.078 15.12 3.078C66.889 78.045 84 61.064 84 40.12 84 19.174 66.889 2.195 45.779 2.195z"
                     />
                   </g>

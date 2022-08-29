@@ -43,7 +43,7 @@ interface DetailProductPageProps {
 }
 
 export default function DetailProductPage({
-  data: { detail, head, product },
+  data: { detail, head, badges},
   benefits,
   productsDogs,
   productsCats,
@@ -59,64 +59,11 @@ export default function DetailProductPage({
     },
   ];
 
-  // const listBenefitsSubstituir: Benefits = [
-  //   {
-  //     id: 1,
-  //     icon: "/images/icon-benefits-1.png",
-  //     title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
-  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-  //   },
-  //   {
-  //     id: 2,
-  //     icon: "/images/icon-benefits-1.png",
-  //     title: "SISTEMA URINÁRIO SAUDÁVEL",
-  //     subTitle: "Equilíbrio do pH urinário",
-  //   },
-  //   {
-  //     id: 3,
-  //     icon: "/images/icon-benefits-1.png",
-  //     title: "TAURINA",
-  //     subTitle: "Essencial para a saúde cardíaca e para a visão",
-  //   },
-  //   {
-  //     id: 4,
-  //     icon: "/images/icon-benefits-1.png",
-  //     title: "COMBATE DOS RADICAIS LIVRES",
-  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-  //   },
-  //   {
-  //     id: 5,
-  //     icon: "/images/icon-benefits-1.png",
-  //     title: "PELE SAUDÁVEL E PELOS MAIS BONITOS",
-  //     subTitle: "Ômegas 3 e 6, biotina e zinco orgânicos",
-  //   },
-  // ];
-
-  // const tabela = [
-  //   {
-  //     id: 1,
-  //     titulo: "Umidade (máx.)",
-  //     items: [" 100 g/kg", "10%", "10%"],
-  //   },
-  // ];
-
-  // const tabela2 = [
-  //   {
-  //     id: 1,
-  //     titulo: "Umidade (máx.)",
-  //     items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
-  //   },
-  //   {
-  //     id: 2,
-  //     titulo: "teste",
-  //     items: ["100 g/kg", "10%", "11%", "13%", "15%", "15%", "15%"],
-  //   },
-  // ];
-
   return (
     <Layout>
       <Head>
         <title>{head.pageTitle}</title>
+        <meta name="description" content={head.metaDescription}/>
       </Head>
 
       <S.ShopDetail>
@@ -134,7 +81,6 @@ export default function DetailProductPage({
                   className="icon-selo"
                   alt="Icone selo 100% satisfacão"
                 />
-
                 <NextImage layout="fill" isBaseUrl src={detail.imagem} />
               </div>
             </div>
@@ -150,8 +96,8 @@ export default function DetailProductPage({
 
               <div className="bottom">
                 <ul className="benefits">
-                  <li className="paragraph-1-medium">• Gatos adultos</li>
-                  <li className="paragraph-1-medium">• Sabor Frango</li>
+                  <li className="paragraph-1-medium transform">• {detail.subtitulo}</li>
+                  <li className="paragraph-1-medium">• {detail.extra5}</li>
                 </ul>
 
                 <div className="quantity">
@@ -170,18 +116,18 @@ export default function DetailProductPage({
           </Container>
         </section>
 
-        <BenefitsComponent listBenefits={benefits} />
+        {/* <BenefitsComponent listBenefits={badges} /> */}
 
         <TabsSectionComponent product={detail} />
 
         {detail.url.includes("caes") ? (
-          <DestaquesProdutosComponent key={detail.id}
+          <DestaquesProdutosComponent key={1}
             title="Produtos ralacionados"
             listProducts={productsDogs.items}
           />
         ) : (
-          <DestaquesProdutosComponent key={detail.id}
-            title="Produtos ralacionados"
+          <DestaquesProdutosComponent
+            title="Produtos ralacionados" key={2}
             listProducts={productsCats.items}
           />
         )}

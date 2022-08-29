@@ -106,5 +106,10 @@ export const TabsSection = styled.section`
     button {
       border-radius: unset !important;
     }
+
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
   }
 `;

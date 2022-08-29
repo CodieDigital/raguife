@@ -1,6 +1,9 @@
 import { BreadCrumbComponent } from "components/data/breadcrumb";
 import { Container } from "components/data/container";
 import { Layout } from "components/layout";
+import { GetServerSideProps } from "next";
+import { PageInformationProps } from "src/interfaces/informationsPage";
+import { api } from "src/services/api";
 import * as S from "styles/pages/contact";
 
 const BreadCrumbList = [
@@ -50,3 +53,4 @@ export default function TermsPage() {
     </Layout>
   );
 }
+

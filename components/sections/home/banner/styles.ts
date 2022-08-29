@@ -18,7 +18,7 @@ export const Banner = styled.section<BannerStyleProps>`
     display: none;
   }
 
-  .absolute-image {
+  .swiper-banner {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,8 +26,16 @@ export const Banner = styled.section<BannerStyleProps>`
     object-fit: cover;
     height: inherit;
     width: 100%;
+    height: 100%;
     min-height: inherit;
     object-position: top;
+
+    .absolute-image {
+      min-height: inherit;
+      height: 100vh;
+      object-fit: inherit;
+      width: 100%;
+    }
   }
 
   .container {
