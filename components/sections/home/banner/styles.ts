@@ -67,9 +67,10 @@ export const Banner = styled.section<BannerStyleProps>`
     align-items: center;
     line-height: 24px;
     animation: scroll 3s infinite linear forwards;
-    fill: var(--secundary-color);
-    color: var(--secundary-color);
+    fill: var(--tertiary-color);
+    color: var(--tertiary-color);
     margin-bottom: 35px;
+    cursor: pointer;
   }
 
   @keyframes scroll {
