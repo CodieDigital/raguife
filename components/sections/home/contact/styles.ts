@@ -122,6 +122,11 @@ export const ContactStyle = styled.section<ContactProps>`
     .container {
       max-width: 470px;
     }
+
+    button {
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 
   @media only screen and (max-width: 500px) {

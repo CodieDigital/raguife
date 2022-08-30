@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetServerSideProps } from "next";
 
 import { api } from "src/services/api";
@@ -22,16 +23,23 @@ import {
 } from "src/services/shop/get";
 import { Banner } from "components/sections/home/banner";
 import { Container } from "components/data/container";
+import { PageInformationProps } from "src/interfaces/informationsPage";
 
 interface HomeProps {
   products: ProductProps;
   banners: Banner[];
+  information: PageInformationProps;
 }
 
-export default function HomePage({ products, banners }: HomeProps) {
+export default function HomePage({ products, banners,information }: HomeProps) {
 
   return (
     <Layout>
+      <Head>
+        <title>{information.head.pageTitle}</title>
+        <meta name="description" content={information.head.metaDescription}/>
+      </Head>
+
       <S.HomePage>
         <BannerComponent listBanners={banners} />
 
@@ -67,10 +75,9 @@ export default function HomePage({ products, banners }: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const responseProducts = await GetProductsHome(ctx);
   const banners = await api.get<Banner[]>(`/component/banners/GetAll`);
+  const informationPage = await api.get<PageInformationProps>(`/pages/home`);
 
-  console.log(banners)
-
-  if (!banners || !responseProducts) {
+  if (!banners || !responseProducts || !informationPage ) {
     return {
       props: {
         banner: [],
@@ -82,6 +89,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     props: {
       banners: banners.data,
       products: responseProducts,
+      information: informationPage.data,
     },
   };
 };

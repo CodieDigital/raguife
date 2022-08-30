@@ -59,26 +59,6 @@ export const ShopDetail = styled.main`
         text-transform: uppercase;
       }
 
-      .breadcrumb {
-        li {
-          a,
-          span {
-            color: #fff;
-            opacity: 0.5;
-          }
-
-          a:hover {
-            color: var(--secundary-color);
-            opacity: 1;
-          }
-        }
-
-        li::after {
-          color: #fff;
-          opacity: 0.5;
-        }
-      }
-
       .top {
         h2 {
           min-height: 90px;
@@ -138,6 +118,8 @@ export const ShopDetail = styled.main`
 
   @media only screen and (max-width: 1600px) {
     .box-product {
+      padding-bottom: 35px;
+
       .box-image {
         max-width: 590px;
       }
@@ -166,6 +148,8 @@ export const ShopDetail = styled.main`
     padding-top: 55px;
 
     .box-product {
+      padding-bottom: 30px;
+
       .box-image {
         max-width: 510px;
         padding-right: 7.75vw;
@@ -202,6 +186,8 @@ export const ShopDetail = styled.main`
     padding-top: 50px;
 
     .box-product {
+      padding-bottom: 25px;
+
       .box-image {
         max-width: 455px;
         padding-right: 7vw;
@@ -238,6 +224,8 @@ export const ShopDetail = styled.main`
     padding-top: 45px;
 
     .box-product {
+      padding-bottom: 20px;
+
       .container {
         gap: 50px;
       }
@@ -297,6 +285,8 @@ export const ShopDetail = styled.main`
     padding-top: 35px;
 
     .box-product {
+      padding-bottom: 15px;
+
       .show-mobile {
         margin-bottom: 20px;
       }

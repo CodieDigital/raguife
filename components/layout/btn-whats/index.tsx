@@ -3,7 +3,7 @@ import * as S from "./styles";
 export function ButtonWhats() {
   return (
     <S.ButtonWhatsComponent>
-      <a target={"_blank"} href="https://api.whatsapp.com/send?phone=551736314347&text=Bem%20vindos%20a%20Raguife%2C%20como%20podemos%20ajudar%20%3F">
+      <a target={"_blank"} href="https://api.whatsapp.com/send?phone=55017996126414&text=Bem%20vindos%20a%20Raguife%2C%20como%20podemos%20ajudar%20%3F">
         {/* <img src="/images/button-whats.png" alt="" /> */}
 
         <svg

@@ -6,9 +6,8 @@ export const BreadCrumb = styled.ul`
 
   a,
   span {
-    color: #585857;
+    color: #fff;
     opacity: 0.5;
-    transition: all 0.3s;
   }
 
   a:hover {
@@ -19,7 +18,7 @@ export const BreadCrumb = styled.ul`
   li::after {
     content: ">";
     margin: 0 11px;
-    color: #585857;
+    color: #fff;
     opacity: 0.5;
     font-family: Graphie;
     font-size: 14px;

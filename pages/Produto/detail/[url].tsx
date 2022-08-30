@@ -25,6 +25,7 @@ import { DestaquesProdutosComponent } from "components/layout/DestaquesProdutos"
 import { BenefitsComponent } from "components/sections/produto-detalhe/benefits-carousel";
 
 import * as S from "styles/pages/shop-detail";
+import { useRouter } from "next/router";
 
 // interface VariationProps {
 //   id: number;
@@ -43,15 +44,16 @@ interface DetailProductPageProps {
 }
 
 export default function DetailProductPage({
-  data: { detail, head, badges},
-  benefits,
+  data: { detail, head, badges },
   productsDogs,
   productsCats,
 }: DetailProductPageProps) {
+  const router = useRouter();
+
   const breadCrumbProduct = [
     {
-      label: "Página Inicial",
-      url: "/",
+      label: detail.categoriaTitle,
+      url: "/produtos/" +  detail.categoriaUrl,
     },
     {
       label: detail ? detail.titulo : "/",
@@ -63,7 +65,7 @@ export default function DetailProductPage({
     <Layout>
       <Head>
         <title>{head.pageTitle}</title>
-        <meta name="description" content={head.metaDescription}/>
+        <meta name="description" content={head.metaDescription} />
       </Head>
 
       <S.ShopDetail>
@@ -91,26 +93,32 @@ export default function DetailProductPage({
                   <BreadCrumbComponent list={breadCrumbProduct} />
                 </div>
 
-                <h2 className="title-3-bold">{detail.titulo}</h2>
+                <h2 className="title-3-bold transform">{detail.titulo}</h2>
               </div>
 
               <div className="bottom">
                 <ul className="benefits">
-                  <li className="paragraph-1-medium transform">• {detail.subtitulo}</li>
+                  <li className="paragraph-1-medium transform">
+                    • {detail.subtitulo}
+                  </li>
                   <li className="paragraph-1-medium">• {detail.extra5}</li>
                 </ul>
 
-                <div className="quantity">
-                  <span className="paragraph-2-regular">
-                    Disponível em embalagens de:
-                  </span>
-                  <div className="box">
-                    <div className="box-quantity paragraph-2-regular">3 kg</div>
-                    <div className="box-quantity paragraph-2-regular">
-                      15 kg
+                {(detail.extra6 || detail.extra7) && 
+                  <div className="quantity">
+                    <span className="paragraph-2-regular">
+                      Disponível em embalagens de:
+                    </span>
+                    <div className="box">
+                      <div className="box-quantity paragraph-2-regular">
+                        {detail.extra6}
+                      </div>
+                      <div className="box-quantity paragraph-2-regular">
+                        {detail.extra7}
+                      </div>
                     </div>
                   </div>
-                </div>
+                }
               </div>
             </div>
           </Container>
@@ -120,14 +128,16 @@ export default function DetailProductPage({
 
         <TabsSectionComponent product={detail} />
 
-        {detail.url.includes("caes") ? (
-          <DestaquesProdutosComponent key={1}
+        {detail.categoriaTitle.includes("Cães") ? (
+          <DestaquesProdutosComponent
+            key={1}
             title="Produtos ralacionados"
             listProducts={productsDogs.items}
           />
         ) : (
           <DestaquesProdutosComponent
-            title="Produtos ralacionados" key={2}
+            title="Produtos ralacionados"
+            key={2}
             listProducts={productsCats.items}
           />
         )}
@@ -140,8 +150,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const response = await GetProduct(ctx);
   const responseProductsDogs = await GetProductsDogs(ctx);
   const responseProductsCats = await GetProductsCats(ctx);
-
-  console.log(responseProductsDogs)
 
   if (
     response === undefined ||

@@ -4,7 +4,7 @@ import * as S from "./styles";
 export function RedesSociasComponent() {
   return (
     <S.RedesSocias className="redes-sociais ">
-        <a target="_blanck" href="https://api.whatsapp.com/send?phone=551736314347&text=Bem%20vindos%20a%20Raguife%2C%20como%20podemos%20ajudar%20%3F">
+        <a target="_blanck" href="https://api.whatsapp.com/send?phone=55017996126414&text=Bem%20vindos%20a%20Raguife%2C%20como%20podemos%20ajudar%20%3F">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"

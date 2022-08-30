@@ -7,6 +7,7 @@ export const TabContent = styled.section`
   .content {
     max-width: 95%;
     margin: 0 auto;
+    color: #fff;
   }
 
   .table1 {
@@ -58,8 +59,15 @@ export const TabContent = styled.section`
     table {
       border: 1px solid var(--tertiary-color);
       border-radius: 10px;
-      max-width: 100%;
+      max-width: 1500px;
       width: 100%;
+      overflow-x: auto;
+      border-collapse: separate;
+
+      tbody {
+        width: 1500px;
+        overflow-x: auto;
+      }
 
       tr:nth-child(even) {
         background-color: #005b65;

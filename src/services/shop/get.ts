@@ -21,21 +21,15 @@ export interface Product {
   ordem: number;
   subtitulo: string;
   thumbnail: string;
-  extra1: string;
-  extra2: string;
-  extra3: string;
-  extra4: string;
-  extra5:string
-
-  //preciso receber
-  categoryTitle: string; //para breadcrumb
-  categoryFilter:string; //para subtitulo lista 1
-  sabor:string; // para subititulo lista 2
-  disponibilidade: Disponivel[]; // box disponibilidade
-}
-
-interface Disponivel {
-  titulo: string;
+  extra1?: string;
+  extra2?: string;
+  extra3?: string;
+  extra4?: string;
+  extra5?:string
+  extra6?: string;
+  extra7?: string;
+  categoriaTitle:string;
+  categoriaUrl:string;
 }
 
 interface ProductVariation {
@@ -107,8 +101,6 @@ export async function GetProducts(
       )}`
     );
 
-    console.log(data)
-
     if (data) {
       return data;
     }
@@ -122,8 +114,6 @@ export async function GetProductsHome(
 ) {
   if (router) {
     const { data } = await api.get<ProductProps>(`/Produto/list/GetAll`);
-
-    console.log(data)
 
     if (data) {
       return data;

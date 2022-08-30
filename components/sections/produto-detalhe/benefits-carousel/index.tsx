@@ -12,7 +12,6 @@ interface BenefitsSwiperlProps {
 }
 
 export function BenefitsComponent({ listBenefits }: BenefitsSwiperlProps) {
-  console.log(listBenefits)
   return (
     <S.BenefitsComponent>
       <Container>
@@ -20,9 +19,21 @@ export function BenefitsComponent({ listBenefits }: BenefitsSwiperlProps) {
 
         <Swiper
           slidesPerView={4}
-          width={1335}
-          spaceBetween={45}
           navigation={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            680: {
+              slidesPerView: 2,
+            },
+            901: {
+              slidesPerView: 3,
+            },
+            1601: {
+              slidesPerView: 4,
+            },
+          }}
         >
           {listBenefits &&
             listBenefits.map((cardBenefits) => (

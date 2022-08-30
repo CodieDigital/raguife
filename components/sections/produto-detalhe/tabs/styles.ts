@@ -44,12 +44,16 @@ export const TabsSection = styled.section`
   }
 
   @media only screen and (max-width: 1600px) {
+    padding-top: 35px;
+
     button {
       height: 52px;
     }
   }
 
   @media only screen and (max-width: 1400px) {
+    padding-top: 30px;
+
     .tabs-actions {
       gap: 25px;
     }
@@ -60,6 +64,8 @@ export const TabsSection = styled.section`
   }
 
   @media only screen and (max-width: 1200px) {
+    padding-top: 25px;
+
     .tabs-actions {
       gap: 20px;
     }
@@ -74,6 +80,8 @@ export const TabsSection = styled.section`
   }
 
   @media only screen and (max-width: 1024px) {
+    padding-top: 20px;
+
     .tabs-actions {
       flex-direction: column;
     }

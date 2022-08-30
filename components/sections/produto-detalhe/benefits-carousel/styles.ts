@@ -32,4 +32,29 @@ export const BenefitsComponent = styled.div`
     max-width: 1290px;
     margin: 0 auto;
   }
+
+  @media only screen and (max-width: 1600px) {
+    padding: 35px 0;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    padding: 30px 0;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    padding: 25px 0;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding: 20px 0;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .container {
+      max-width: 600px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+  }
 `;
