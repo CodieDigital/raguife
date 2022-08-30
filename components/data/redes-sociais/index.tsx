@@ -50,7 +50,7 @@ export function RedesSociasComponent() {
           </svg>
         </a>
 
-        <a target="_blanck" href="https://www.facebook.com/raguife">
+        <a target="_blanck" href="https://pt-br.facebook.com/raguife">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="29"

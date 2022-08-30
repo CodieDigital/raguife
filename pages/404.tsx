@@ -8,7 +8,7 @@ export default function Page404() {
     <Layout>
       <S.NotFound>
         <Container>
-          <p className="title-3-bold-cinzel">Página não encontrada ;(</p>
+          <p className="title-4-bold">Página não encontrada ;(</p>
         </Container>
       </S.NotFound>
     </Layout>

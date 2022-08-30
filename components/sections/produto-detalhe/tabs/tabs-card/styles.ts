@@ -10,6 +10,25 @@ export const TabContent = styled.section`
     color: #fff;
   }
 
+  table::-webkit-scrollbar {
+    width: 20px;
+    height: 7px;
+  }
+
+  table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  table::-webkit-scrollbar-thumb {
+    background: var(--secundary-color);
+    border-radius: 10px;
+  }
+
+  table::-webkit-scrollbar-thumb:hover {
+    background: var(--tertiary-color);
+  }
+
   .table1 {
     table {
       max-width: 100%;
@@ -57,16 +76,25 @@ export const TabContent = styled.section`
 
   .table2 {
     table {
+      display: flex;
+      flex-direction: column;
       border: 1px solid var(--tertiary-color);
       border-radius: 10px;
-      max-width: 1500px;
-      width: 100%;
+      max-width: 100%;
+      width: 1500px;
       overflow-x: auto;
-      border-collapse: separate;
 
       tbody {
         width: 1500px;
         overflow-x: auto;
+      }
+
+      td:first-child {
+        width: 250px;
+      }
+
+      td {
+        width: 170px;
       }
 
       tr:nth-child(even) {
@@ -150,23 +178,6 @@ export const TabContent = styled.section`
 
     p {
       line-height: 24px;
-    }
-
-    table::-webkit-scrollbar {
-      width: 20px;
-      height: 7px;
-    }
-
-    table::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-
-    table::-webkit-scrollbar-thumb {
-      background: var(--secundary-color);
-    }
-
-    table::-webkit-scrollbar-thumb:hover {
-      background: var(--secundary-color);
     }
 
     .table1 {
