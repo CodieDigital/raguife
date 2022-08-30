@@ -67,9 +67,10 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
 
       <Container>
         <div className="invisble"></div>
-        <div
+        
+        <a
           className="scroll link-1-regular"
-          onClick={() => scrollToSection()}
+          href="#produtos"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +86,7 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
           </svg>
 
           <span>saiba mais</span>
-        </div>
+        </a>
       </Container>
     </S.Banner>
   );

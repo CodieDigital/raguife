@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const BenefitsCard = styled.div`
   width: 100%;
+  text-align: center;
 
   .image {
-    max-width: 40px;
+    max-width: 175px;
     width: 100%;
+    aspect-ratio:175/175;
+    margin: 0 auto;    
   }
 
   .image + * {
@@ -21,6 +24,6 @@ export const BenefitsCard = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    margin-bottom: 6px;
+    margin: 0 auto;
   }
 `;

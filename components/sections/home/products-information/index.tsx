@@ -5,7 +5,7 @@ import * as S from "./styles";
 
 export function ProductsInformation() {
   return (
-    <S.ProductInformation id="Produtos">
+    <S.ProductInformation id="produtos">
       <Container>
         <img
           className="image-dog hide-mobile-768"

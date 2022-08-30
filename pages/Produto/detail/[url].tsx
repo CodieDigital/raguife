@@ -116,7 +116,7 @@ export default function DetailProductPage({
           </Container>
         </section>
 
-        {/* <BenefitsComponent listBenefits={badges} /> */}
+        <BenefitsComponent listBenefits={badges} />
 
         <TabsSectionComponent product={detail} />
 

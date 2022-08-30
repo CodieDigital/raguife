@@ -4,13 +4,12 @@ export const BenefitsComponent = styled.div`
   padding: 40px 0;
 
   .container {
-    max-width: 1380px;
     position: relative;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
-    color: var(--primary-color);
+    color: #fff;
 
     &::after {
       font-size: 25px;
