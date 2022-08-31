@@ -63,7 +63,7 @@ export default function ShopDogPage({ products, categories }: ShopPageProps) {
         <div className="shop-content">
           <div className="top">
             <Container>
-              <h2 className="title-2-bold">Produtos para cães</h2>
+              <h2 className="title-2-bold">Produtos para Cães</h2>
 
               {/* <FilterBy
                 listFilters={categories}

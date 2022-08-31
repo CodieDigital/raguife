@@ -365,6 +365,12 @@ export const Sobre = styled.section`
       .grid-nutricao {
         row-gap: 35px;
       }
+
+      .box-nutricao {
+        h4 {
+          font-size: 16px;
+        }
+      }
     }
 
     .beneficios {

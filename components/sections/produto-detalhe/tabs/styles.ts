@@ -60,6 +60,10 @@ export const TabsSection = styled.section`
 
     button {
       height: 48px;
+      
+      span {
+        font-size: 14.5px;
+      }
     }
   }
 

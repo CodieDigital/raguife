@@ -41,7 +41,7 @@ export function CardProductComponent({ card }: CardProps) {
             },
           }}>
           <a href="replaced">
-            <h3 className="title-5-bold">{card.titulo}</h3>
+            <h3 className="title-5-bold capitalize">{card.titulo}</h3>
           </a>
         </Link>
 

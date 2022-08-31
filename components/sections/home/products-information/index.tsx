@@ -15,14 +15,12 @@ export function ProductsInformation() {
 
         <div className="content">
           <div className="title">
-            <h2 className="title-4-bold">Nossos produtos</h2>
+            <h2 className="title-4-bold capitalize">Nossos produtos</h2>
 
             <p className="paragraph-2-regular">
-              Linhas para cães e gatos completas e desenvolvidas com
-              ingredientes selecionados de altíssima qualidade. São enriquecidos
-              com vitaminas, minerais e balanceados com um rigoroso controle de
-              qualidade, para garantir a alimentação do seu pet mais nutritiva e
-              saborosa.
+              Produzimos alimentos com ingredientes selecionados e de altíssima
+              qualidade garantindo uma nutrição eficiente e muito saborosa para
+              o seu pet.
             </p>
           </div>
 

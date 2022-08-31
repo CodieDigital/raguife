@@ -86,7 +86,7 @@ export function ContactComponent({ linksContato }: ContatoProps) {
       <Container>
         <h4 className="title-6-regular uppercase">Envie uma mensagem</h4>
 
-        <h3 className="title-4-bold title">Entre em contato</h3>
+        <h3 className="title-4-bold title capitalize">Entre em contato</h3>
 
         {linksContato && <LinksContato icon />}
 

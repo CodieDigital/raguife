@@ -93,7 +93,7 @@ export default function DetailProductPage({
                   <BreadCrumbComponent list={breadCrumbProduct} />
                 </div>
 
-                <h2 className="title-3-bold transform">{detail.titulo}</h2>
+                <h2 className="title-3-bold capitalize">{detail.titulo}</h2>
               </div>
 
               <div className="bottom">
@@ -131,7 +131,7 @@ export default function DetailProductPage({
         {detail.categoriaTitle.includes("Cães") ? (
           <DestaquesProdutosComponent
             key={1}
-            title="Produtos ralacionados"
+            title="Produtos relacionados"
             listProducts={productsDogs.items}
           />
         ) : (

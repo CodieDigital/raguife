@@ -9,7 +9,7 @@ export function BeneficiosInformacoes() {
           return (
             <div key={benefit.title + index} className="text-image invert-row">
               <div className="text">
-                <h3 className="title-4-bold">{benefit.title}</h3>
+                <h3 className="title-4-bold capitalize">{benefit.title}</h3>
 
                 <p className="paragraph-2-regular">{benefit.description}</p>
               </div>
@@ -23,7 +23,7 @@ export function BeneficiosInformacoes() {
 
         return  <div key={benefit.title + index} className="text-image">
         <div className="text">
-          <h3 className="title-4-bold">{benefit.title}</h3>
+          <h3 className="title-4-bold capitalize">{benefit.title}</h3>
 
           <p className="paragraph-2-regular">{benefit.description}</p>
         </div>

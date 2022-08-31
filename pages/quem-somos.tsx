@@ -14,27 +14,31 @@ interface InformationPageProps {
   information: PageInformationProps;
 }
 
-export default function SobrePage({information}:InformationPageProps) {
+export default function SobrePage({ information }: InformationPageProps) {
   return (
     <Layout>
       <Head>
         <title>{information.head.pageTitle}</title>
-        <meta name="description" content={information.head.metaDescription}/>
+        <meta name="description" content={information.head.metaDescription} />
       </Head>
-      
+
       <S.Sobre>
         <div className="banner-sobre">
           <div className="text-image">
             <div className="text">
-              <h4 className="title-6-regular uppercase">Quem somos</h4>
+              <h4 className="title-6-regular uppercase capitalize">
+                Quem somos
+              </h4>
 
               <h1 className="title-2-bold">
-                <span>Oferecendo</span>
+                <span className="capitalize">Oferecendo</span>
                 <span className="title-1-cocktail titulo-2">
                   nutrição de
                   <br /> qualidade
                 </span>
-                <span className="title-2-bold titulo-3">para os pets</span>
+                <span className="title-2-bold titulo-3 capitalize">
+                  para os pets
+                </span>
               </h1>
             </div>
 
@@ -47,7 +51,7 @@ export default function SobrePage({information}:InformationPageProps) {
         <div className="sobre">
           <Container>
             <div className="text">
-              <h2 className="title-4-bold">Sobre a Raguife</h2>
+              <h2 className="title-4-bold">A Raguife Pet</h2>
 
               <p className="paragraph-2-regular">
                 Somos uma empresa tradicional no ramo da aquicultura no interior
@@ -85,10 +89,12 @@ export default function SobrePage({information}:InformationPageProps) {
           />
 
           <Container>
-            <h2 className="title-4-bold">Nutrição de qualidade para os pets</h2>
+            <h2 className="title-4-bold capitalize">
+              Nutrição de Excelência para Pets
+            </h2>
 
             <div className="grid-nutricao hide-mobile">
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-1.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -96,7 +102,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </h4>
               </div>
 
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-2.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -104,7 +110,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </h4>
               </div>
 
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-3.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -113,7 +119,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </h4>
               </div>
 
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-4.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -122,7 +128,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </h4>
               </div>
 
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-5.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -130,7 +136,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </h4>
               </div>
 
-              <div className="box-nutricao">
+              <div className="box-nutricao capitalize">
                 <img src="/images/icon-box-nutricao/icon-6.png" alt="icon" />
 
                 <h4 className="title-6-regular">
@@ -156,75 +162,82 @@ export default function SobrePage({information}:InformationPageProps) {
                 }}
               >
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-1.png"
                       alt="icon"
                     />
 
                     <h4 className="title-6-regular">
-                      Produtos de alta qualiidade
+                      Nutrição de <br /> qualidade
                     </h4>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-2.png"
                       alt="icon"
                     />
 
-                    <h4 className="title-6-regular">Insumos naturais</h4>
+                    <h4 className="title-6-regular">
+                      Contém ingredientes <br /> naturais
+                    </h4>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-3.png"
                       alt="icon"
                     />
 
-                    <h4 className="title-6-regular">Controle de qualidade</h4>
+                    <h4 className="title-6-regular">
+                      Alimentos ricos em vitaminas,
+                      <br /> antioxidantes e prebióticos
+                    </h4>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-4.png"
                       alt="icon"
                     />
 
                     <h4 className="title-6-regular">
-                      Profissionais com expertise de mais de 15 anos
+                      Alta <br />
+                      digestibilidade
                     </h4>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-5.png"
                       alt="icon"
                     />
 
                     <h4 className="title-6-regular">
-                      Premium especial e super premium
+                      Formulações <br /> direcionadas
                     </h4>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-nutricao">
+                  <div className="box-nutricao capitalize">
                     <img
                       src="/images/icon-box-nutricao/icon-6.png"
                       alt="icon"
                     />
 
                     <h4 className="title-6-regular">
-                      Saúde e bem-estar <br /> para cães e gatos
+                      Promoção de saúde
+                      <br /> e longevidade
                     </h4>
                   </div>
                 </SwiperSlide>
@@ -257,7 +270,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 }}
               >
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-1.png"
                       alt="Icone box"
@@ -275,7 +288,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-2.png"
                       alt="Icone box"
@@ -293,7 +306,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-3.png"
                       alt="Icone box"
@@ -308,7 +321,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-4.png"
                       alt="Icone box"
@@ -325,7 +338,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-5.png"
                       alt="Icone box"
@@ -342,7 +355,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-6.png"
                       alt="Icone box"
@@ -359,7 +372,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-7.png"
                       alt="Icone box"
@@ -374,7 +387,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-8.png"
                       alt="Icone box"
@@ -391,7 +404,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-9.png"
                       alt="Icone box"
@@ -406,7 +419,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="box-beneficios">
+                  <div className="box-beneficios capitalize">
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-10.png"
                       alt="Icone box"
@@ -425,7 +438,7 @@ export default function SobrePage({information}:InformationPageProps) {
 
           <div className="hide-mobile">
             <Container>
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-1.png"
                   alt="Icone box"
@@ -439,7 +452,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-2.png"
                   alt="Icone box"
@@ -449,13 +462,11 @@ export default function SobrePage({information}:InformationPageProps) {
                   <h4 className="title-6-bold">
                     Controle e Redução do Tartáro
                   </h4>
-                  <p className="title-6-regular">
-                    Hexametafosfato de sódio
-                  </p>
+                  <p className="title-6-regular">Hexametafosfato de sódio</p>
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-3.png"
                   alt="Icone box"
@@ -466,7 +477,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-4.png"
                   alt="Icone box"
@@ -475,13 +486,11 @@ export default function SobrePage({information}:InformationPageProps) {
                   <h4 className="title-6-bold">
                     Equilíbrio da Flora Intestinal
                   </h4>
-                  <p className="title-6-regular">
-                    Prebiótico e beta-glucanas
-                  </p>
+                  <p className="title-6-regular">Prebiótico e beta-glucanas</p>
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-5.png"
                   alt="Icone box"
@@ -496,7 +505,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-6.png"
                   alt="Icone box"
@@ -511,7 +520,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-7.png"
                   alt="Icone box"
@@ -524,7 +533,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-8.png"
                   alt="Icone box"
@@ -539,7 +548,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-9.png"
                   alt="Icone box"
@@ -552,7 +561,7 @@ export default function SobrePage({information}:InformationPageProps) {
                 </div>
               </div>
 
-              <div className="box-beneficios">
+              <div className="box-beneficios capitalize">
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-10.png"
                   alt="Icone box"
@@ -570,7 +579,7 @@ export default function SobrePage({information}:InformationPageProps) {
 
         <div className="tradicao">
           <Container>
-            <h2 className="title-4-bold">
+            <h2 className="title-4-bold capitalize">
               A experiência da aquicultura agora dentro do seu lar!
             </h2>
 
@@ -587,7 +596,7 @@ export default function SobrePage({information}:InformationPageProps) {
               href="https://grupoambaramaral.com.br/"
               className="bt link-2-medium"
             >
-              saiba mais sobre o grupo
+              Saiba Mais Sobre o Grupo
             </a>
           </Container>
         </div>
@@ -597,12 +606,13 @@ export default function SobrePage({information}:InformationPageProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const informationsPage = await api.get<PageInformationProps>("pages/quem-somos");
+  const informationsPage = await api.get<PageInformationProps>(
+    "pages/quem-somos"
+  );
 
   return {
     props: {
       information: informationsPage.data,
-    }
-  }
-}
-
+    },
+  };
+};

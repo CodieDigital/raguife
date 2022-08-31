@@ -20,7 +20,7 @@ export function DestaquesProdutosComponent({
   return (
     <S.DestaquesProdutos>
       <Container>
-        {title && <h2 className="title-4-bold">{title}</h2>}
+        {title && <h2 className="title-4-bold capitalize">{title}</h2>}
         <Swiper
           navigation={true}
           slidesPerView={3}

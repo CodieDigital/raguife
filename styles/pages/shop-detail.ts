@@ -76,6 +76,10 @@ export const ShopDetail = styled.main`
 
     .benefits {
       color: #fff;
+      
+      li+li {
+        margin-top: 5px;
+      }
     }
 
     .box {

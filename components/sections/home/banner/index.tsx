@@ -85,7 +85,7 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
             </g>
           </svg>
 
-          <span>saiba mais</span>
+          <span className="capitalize">saiba mais</span>
         </a>
       </Container>
     </S.Banner>

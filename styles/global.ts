@@ -82,6 +82,10 @@ ul {
     margin-bottom: 0 !important;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .container {
     max-width: var(--container);
     width: 100%;

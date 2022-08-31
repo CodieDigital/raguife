@@ -75,10 +75,15 @@ export const Banner = styled.section<BannerStyleProps>`
     align-items: center;
     line-height: 24px;
     animation: scroll 3s infinite linear forwards;
-    fill: var(--tertiary-color);
-    color: var(--tertiary-color);
+    fill: #fff;
+    color: #fff;
     margin-bottom: 35px;
     cursor: pointer;
+  }
+
+  .scroll:hover {
+    color: var(--secundary-color);
+    fill: var(--secundary-color);
   }
 
   @keyframes scroll {
