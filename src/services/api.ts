@@ -2,9 +2,9 @@ import axios from "axios";
 // import { parseCookies } from "nookies";
 
 const apiURL = "https://api.raguifepet.com.br/";
-const baseImage = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/uploads/";
-const baseImageGallery = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/imagens/Products/";
-const baseVideo = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/uploads/videos/"
+const baseImage = "https://painel.raguifepet.com.br/uploads/";
+const baseImageGallery = "https://painel.raguifepet.com.br/imagens/Products/";
+const baseVideo = "https://painel.raguifepet.com.br/uploads/videos/"
 
 export function getAPIClient(ctx?: any) {
   // const { "auth.token": token } = parseCookies(ctx);
