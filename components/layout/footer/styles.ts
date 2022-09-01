@@ -189,6 +189,10 @@ export const Footer = styled.footer`
         justify-content: center;
       }
     }
+
+    .links-contato {
+      margin-bottom: 7px;
+    }
   }
 
   @media only screen and (max-width: 768px) {

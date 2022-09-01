@@ -167,7 +167,7 @@ export const Header = styled.header`
       display: flex;
       align-items: center;
       gap: 2.5vw;
-      max-width: 520px;
+      max-width: 680px;
 
       a,
       span {
@@ -295,6 +295,10 @@ export const Header = styled.header`
         .subMenu {
           bottom: 26px;
         }
+      }
+
+      .nav {
+        gap: 2vw;
       }
     }
   }

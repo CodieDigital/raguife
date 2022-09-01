@@ -22,10 +22,7 @@ export function HeaderComponent() {
         <div className="filter" onClick={() => setMenu(false)}></div>
 
         <div className="menu">
-          <div
-            className="close title-5-bold"
-            onClick={() => setMenu(false)}
-          >
+          <div className="close title-5-bold" onClick={() => setMenu(false)}>
             X
           </div>
 
@@ -35,15 +32,11 @@ export function HeaderComponent() {
             </Link>
 
             <Link href={"/quem-somos"} passHref>
-              <a href="replaced" >
-                Quem somos
-              </a>
+              <a href="replaced">Quem somos</a>
             </Link>
 
             <div className={`dropdown ${dropdown ? "active" : ""}`}>
-              <span
-                onClick={() => setdropdown(!dropdown)}
-              >
+              <span onClick={() => setdropdown(!dropdown)}>
                 <span>Produtos</span>
 
                 <svg
@@ -81,10 +74,14 @@ export function HeaderComponent() {
               </div>
             </div>
 
-            <Link href={"/contato"} passHref>
-              <a href="replaced">
-                Contato
+            <Link href={"/onde-encontrar"} passHref>
+              <a href="replaced" className="link-1-regular">
+                Onde encontrar
               </a>
+            </Link>
+
+            <Link href={"/contato"} passHref>
+              <a href="replaced">Contato</a>
             </Link>
           </nav>
           <RedesSociasComponent />
@@ -137,6 +134,14 @@ export function HeaderComponent() {
                   </a>
                 </Link>
               </div>
+            </li>
+
+            <li>
+              <Link href={"/onde-encontrar"} passHref>
+                <a href="replaced" className="link-1-regular">
+                  onde encontrar
+                </a>
+              </Link>
             </li>
 
             <li>

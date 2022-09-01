@@ -56,10 +56,16 @@ export function FooterComponent() {
             </Link>
           </div>
 
-          <div className="links ">
+          <div className="links">
             <h3 className="link-2-medium uppercase">Contato</h3>
 
             <LinksContato />
+
+            <Link href={"/onde-encontrar"} passHref>
+              <a href="replaced" className="link-2-regular">
+                Onde encontrar
+              </a>
+            </Link>
           </div>
 
           <div className="links">
