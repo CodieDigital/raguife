@@ -10,10 +10,12 @@ import "../styles/reset.css";
 import "../styles/fonts.css";
 
 import { GlobalStyle } from "../styles/global";
+import { useRouter } from "next/router";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter()
   return (
     <>
       <Head>

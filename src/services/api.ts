@@ -1,7 +1,7 @@
 import axios from "axios";
 // import { parseCookies } from "nookies";
 
-const apiURL = "http://api.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/";
+const apiURL = "https://api.raguifepet.com.br/";
 const baseImage = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/uploads/";
 const baseImageGallery = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/imagens/Products/";
 const baseVideo = "http://painel.raguifepet.com.br.66-103-159-3.ph107.peopleshostshared.com/uploads/videos/"
