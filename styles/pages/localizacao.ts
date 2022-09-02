@@ -67,6 +67,7 @@ export const Localizacao = styled.section`
     overflow-y: auto;
     padding-left: 13.72vw;
     padding-top: 48px;
+    padding: 48px  0 15px 11.72vw;
 
     h3 {
       color: var(--tertiary-color);
@@ -283,24 +284,13 @@ export const Localizacao = styled.section`
 
     .results {
       padding-left: 35px;
-      max-width: 375px;
-      position: relative;
-      padding-top: 25px;
+      max-width: 365px;
+      padding-top: 35px;
 
       h3 {
         margin-bottom: 11px;
         font-size: 28px;
       }
-    }
-
-    .results::after {
-      content: "";
-      background-color: #fff;
-      width: 100%;
-      height: 15px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
     }
 
     .card-localization {

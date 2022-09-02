@@ -167,7 +167,7 @@ export const Header = styled.header`
       display: flex;
       align-items: center;
       gap: 2.5vw;
-      max-width: 680px;
+      max-width: 720px;
 
       a,
       span {

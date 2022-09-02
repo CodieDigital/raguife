@@ -168,13 +168,13 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
 
         <div className="container-localizacao">
           <div className="results">
-            <h3 className="-bold uppercase">Resultados</h3>
-
             {router.query.userLatitude && (
               <a className="clean" href="/onde-encontrar">
                 Limpar rota
               </a>
             )}
+            {mapPointsState.length === 0 && <p className="paragraph-1-medium">Nenhuma loja encontrada</p>}
+
             <div className="cards-results">
               {mapPointsState.map((card) => {
                 return (
