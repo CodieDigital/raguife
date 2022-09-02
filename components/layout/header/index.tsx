@@ -74,11 +74,11 @@ export function HeaderComponent() {
               </div>
             </div>
 
-            <Link href={"/onde-encontrar"} passHref>
+            {/* <Link href={"/onde-encontrar"} passHref>
               <a href="replaced" className="link-1-regular">
                 Onde encontrar
               </a>
-            </Link>
+            </Link> */}
 
             <Link href={"/contato"} passHref>
               <a href="replaced">Contato</a>
@@ -136,13 +136,13 @@ export function HeaderComponent() {
               </div>
             </li>
 
-            <li>
+            {/* <li>
               <Link href={"/onde-encontrar"} passHref>
                 <a href="replaced" className="link-1-regular">
                   onde encontrar
                 </a>
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link href={"/contato"} passHref>
