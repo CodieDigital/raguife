@@ -54,11 +54,11 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
         {listBanners.map((banner) => (
           <SwiperSlide key={banner.id + banner.titulo}>
             <div className="absolute-image hide-mobile">
-              <NextImage src={banner.imagem} isBaseUrl layout="fill" />
+              <NextImage loading="eager" priority src={banner.imagem} isBaseUrl layout="fill" />
             </div>
 
             <div className="absolute-image show-mobile">
-              <NextImage src={banner.thumbnail} isBaseUrl layout="fill" />
+              <NextImage loading="eager" priority src={banner.thumbnail} isBaseUrl layout="fill" />
             </div>
           </SwiperSlide>
         ))}

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ParalaxBanner = styled.section`
-  background-image: url("/images/bg-paralax-home.jpg");
+  background-image: url("/images/bg-paralax-home.webp");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;

@@ -82,11 +82,11 @@ export default function HomePage({
         <div className="image-text">
           <div className="container-text-image">
             <div className="image">
-              <img src="/images/text-image-4.png" alt="Cachorro e gato" />
+              <img src="/images/text-image-4.webp"  alt="Cachorro e gato" />
             </div>
 
             <div className="text">
-              <img src="/images/image-text-home.png" alt="Texto" />
+              <img src="/images/image-text-home.png"  alt="Texto" />
             </div>
           </div>
         </div>
