@@ -61,11 +61,11 @@ export function FooterComponent() {
 
             <LinksContato />
 
-            {/* <Link href={"/onde-encontrar"} passHref>
+            <Link href={"/onde-encontrar"} passHref>
               <a href="replaced" className="link-2-regular">
                 Onde encontrar
               </a>
-            </Link> */}
+            </Link>
           </div>
 
           <div className="links">

@@ -160,6 +160,7 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
               name="search"
               type="text"
               placeholder="Digite uma localizacao"
+              className="paragraph-1-regular"
               onChange={(e) => HandleSearch(e.target.value)}
             />
           </Container>
@@ -225,6 +226,7 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
                       </div>
                     )}
                     <button
+                    className="link-2-regular"
                       type="button"
                       onClick={() => {
                         getLocation(card);

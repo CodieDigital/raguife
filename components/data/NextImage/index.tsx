@@ -15,7 +15,7 @@ export function NextImage({ src, layout, isBaseUrl, isBaseImageGallery }: NextIm
     <S.Image>
       <Image
         src={src ? (isBaseUrl ? baseImage + src : isBaseImageGallery ?  baseImageGallery + src : src) : "/images/default-image.webp"}
-        layout={layout}
+        layout={layout} loading={"eager"} priority
       />
     </S.Image>
   );

@@ -170,6 +170,22 @@ export const Localizacao = styled.section`
         max-width: 860px;
       }
     }
+
+    .results {
+      max-width: 560px;
+      padding-left: 12.72vw;
+      max-height: 720px;
+    }
+
+    .map {
+      height: 720px;
+    }
+
+    .card-localization {
+      button {
+        height: 46px;
+      }
+    }
   }
 
   @media only screen and (max-width: 1400px) {
@@ -185,6 +201,23 @@ export const Localizacao = styled.section`
       input {
         height: 61px;
         max-width: 840px;
+      }
+    }
+
+    .results {
+      padding-top: 35px;
+      padding-left: 85px;
+      max-width: 450px;
+
+      h3 {
+        font-size: 30px;
+        margin-bottom: 18px;
+      }
+    }
+
+    .card-localization {
+      button {
+        height: 44px;
       }
     }
   }
@@ -208,6 +241,25 @@ export const Localizacao = styled.section`
         max-width: 760px;
       }
     }
+
+    .results {
+      padding-left: 45px;
+      max-width: 400px;
+
+      h3 {
+        margin-bottom: 11px;
+      }
+    }
+
+    .cards-results {
+      gap: 25px;
+    }
+
+    .card-localization {
+      button {
+        height: 42px;
+      }
+    }
   }
 
   @media only screen and (max-width: 1024px) {
@@ -217,6 +269,43 @@ export const Localizacao = styled.section`
 
       .absolute-image {
         right: 0;
+      }
+    }
+
+    .search {
+      padding: 28px 0;
+
+      input {
+        height: 52px;
+        max-width: 700px;
+      }
+    }
+
+    .results {
+      padding-left: 35px;
+      max-width: 375px;
+      position: relative;
+      padding-top: 25px;
+
+      h3 {
+        margin-bottom: 11px;
+        font-size: 28px;
+      }
+    }
+
+    .results::after {
+      content: "";
+      background-color: #fff;
+      width: 100%;
+      height: 15px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .card-localization {
+      button {
+        height: 40px;
       }
     }
   }
@@ -234,6 +323,63 @@ export const Localizacao = styled.section`
       }
 
       p {
+        font-size: 14px;
+      }
+    }
+
+    .search {
+      padding: 25px 0;
+
+      input {
+        height: 47px;
+        max-width: 500px;
+        border-radius: 5px;
+      }
+    }
+
+    .container-localizacao {
+      flex-direction: column;
+    }
+
+    .results {
+      max-width: 100%;
+      padding: 20px 15px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 400px;
+    }
+
+    .map {
+      height: 620px;
+    }
+  }
+
+  @media only screen and (max-width:500px) {
+    .search {
+      padding: 22px 0;
+
+      input {
+        height: 44px;
+        font-size: 15px;
+      }
+    }
+
+    .results {
+      max-height: 365px;
+    }
+
+    .map {
+      height: 520px;
+    }
+  }
+
+  @media only screen and (max-width:400px) {
+    .search {
+      padding: 19px 0;
+
+      input {
+        height: 41px;
         font-size: 14px;
       }
     }
