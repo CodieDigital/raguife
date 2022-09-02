@@ -40,6 +40,7 @@ export const Footer = styled.footer`
     max-width: 178px;
 
     img {
+      max-width: 100%;
       width: 100%;
       object-fit: contain;
     }
