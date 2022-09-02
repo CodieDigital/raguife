@@ -13,7 +13,7 @@ export function FooterComponent() {
           <div className="logo">
             <Link href={"/"} passHref>
               <a href="replaced" className="logo-pets">
-                <img src="/images/logo-footer.png" alt="Logo footer" />
+                <img src="/images/logo-footer.png" loading="lazy" alt="Logo footer" />
               </a>
             </Link>
           </div>
@@ -82,7 +82,7 @@ export function FooterComponent() {
               href="https://grupoambaramaral.com.br/"
               className="logo-ambar"
             >
-              <img src="/images/logo-ambar.png" alt="Logo Ambar" />
+              <img src="/images/logo-ambar.png" loading="lazy" alt="Logo Ambar" />
             </a>
           </div>
         </div>

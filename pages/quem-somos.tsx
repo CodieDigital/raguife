@@ -93,6 +93,7 @@ export default function SobrePage({ information }: InformationPageProps) {
 
             <div className="image">
               <img
+                loading="lazy"
                 src="/images/text-image-page-sobre.png"
                 alt="Caminhão raguife"
               />
@@ -102,6 +103,7 @@ export default function SobrePage({ information }: InformationPageProps) {
 
         <div className="informativo-nutricao">
           <img
+            loading="lazy"
             src="/images/absolute-dog.png"
             alt="Cachorro"
             className="img-left"
@@ -114,7 +116,7 @@ export default function SobrePage({ information }: InformationPageProps) {
 
             <div className="grid-nutricao hide-mobile">
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-1.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-1.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Nutrição de <br /> qualidade
@@ -122,7 +124,7 @@ export default function SobrePage({ information }: InformationPageProps) {
               </div>
 
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-2.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-2.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Contém ingredientes <br /> naturais
@@ -130,7 +132,7 @@ export default function SobrePage({ information }: InformationPageProps) {
               </div>
 
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-3.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-3.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Alimentos ricos em vitaminas,
@@ -139,7 +141,7 @@ export default function SobrePage({ information }: InformationPageProps) {
               </div>
 
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-4.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-4.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Alta <br />
@@ -148,7 +150,7 @@ export default function SobrePage({ information }: InformationPageProps) {
               </div>
 
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-5.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-5.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Formulações <br /> direcionadas
@@ -156,7 +158,7 @@ export default function SobrePage({ information }: InformationPageProps) {
               </div>
 
               <div className="box-nutricao capitalize">
-                <img src="/images/icon-box-nutricao/icon-6.png" alt="icon" />
+                <img src="/images/icon-box-nutricao/icon-6.png" loading="lazy" alt="icon" />
 
                 <h4 className="title-6-regular">
                   Promoção de saúde
@@ -185,6 +187,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-1.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -198,6 +201,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-2.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -211,6 +215,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-3.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -225,6 +230,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-4.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -239,6 +245,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-5.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -252,6 +259,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-box-nutricao/icon-6.png"
                       alt="icon"
+                      loading="lazy"
                     />
 
                     <h4 className="title-6-regular">
@@ -268,6 +276,7 @@ export default function SobrePage({ information }: InformationPageProps) {
             src="/images/absolute-cat.png"
             alt="Gato"
             className="img-right"
+            loading="lazy"
           />
         </div>
 
@@ -293,6 +302,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-1.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
 
                     <div className="text">
@@ -311,6 +321,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-2.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
 
                     <div className="text">
@@ -329,6 +340,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-3.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">
@@ -344,6 +356,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-4.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="texte">
                       <h4 className="title-6-bold">
@@ -361,6 +374,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-5.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">
@@ -378,6 +392,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-6.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">
@@ -395,6 +410,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-7.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">Antioxidantes Naturais</h4>
@@ -410,6 +426,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-8.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">
@@ -427,6 +444,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-9.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
                     <div className="text">
                       <h4 className="title-6-bold">Crescimento Saudável</h4>
@@ -442,6 +460,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                     <img
                       src="/images/icon-beneficios/icon-box-beneficios-10.png"
                       alt="Icone box"
+                      loading="lazy"
                     />
 
                     <div className="text">
@@ -461,6 +480,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-1.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
 
                 <div className="text">
@@ -475,6 +495,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-2.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
 
                 <div className="text">
@@ -489,6 +510,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-3.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">Favorece a Função Cognitiva</h4>
@@ -500,6 +522,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-4.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="texte">
                   <h4 className="title-6-bold">
@@ -513,6 +536,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-5.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">
@@ -528,6 +552,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-6.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">
@@ -543,6 +568,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-7.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">Antioxidantes Naturais</h4>
@@ -556,6 +582,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-8.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">
@@ -571,6 +598,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-9.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
                 <div className="text">
                   <h4 className="title-6-bold">Crescimento Saudável</h4>
@@ -584,6 +612,7 @@ export default function SobrePage({ information }: InformationPageProps) {
                 <img
                   src="/images/icon-beneficios/icon-box-beneficios-10.png"
                   alt="Icone box"
+                  loading="lazy"
                 />
 
                 <div className="text">
@@ -605,8 +634,9 @@ export default function SobrePage({ information }: InformationPageProps) {
             <div className="image">
               <img
                 src="/images/quem-somos-ambar.png"
-                alt=""
+                alt="Logo ambar"
                 className="logo-ambar"
+                loading="lazy"
               />
             </div>
 

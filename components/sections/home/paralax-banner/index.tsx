@@ -7,7 +7,7 @@ export function ParalaxBanner() {
     <S.ParalaxBanner>
       <Container>
         <div className="title">
-          <img src="/images/icon-selo.png" alt="Icone selo" className="icon" />
+          <img src="/images/icon-selo.png" loading="lazy" alt="Icone selo" className="icon" />
 
           <h2 className="title-4-bold capitalize">
             Formulado por especialistas

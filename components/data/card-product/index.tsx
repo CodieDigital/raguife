@@ -28,7 +28,7 @@ export function CardProductComponent({ card }: CardProps) {
           }}
         >
           <a href="replaced">
-            <NextImage loading="eager" priority layout="fill" src={card.imagem} isBaseUrl />
+            <NextImage alt={"imagem-produto" + card.id} loading="eager" priority layout="fill" src={card.imagem} isBaseUrl />
           </a>
         </Link>
       </div>

@@ -15,7 +15,7 @@ export function BeneficiosInformacoes() {
               </div>
 
               <div className="image">
-                <img src={benefit.image} alt={benefit.title} />
+                <img src={benefit.image} loading="lazy" alt={benefit.title} />
               </div>
             </div>
           );
@@ -29,7 +29,7 @@ export function BeneficiosInformacoes() {
         </div>
 
         <div className="image">
-          <img src={benefit.image} alt={benefit.title} />
+          <img src={benefit.image} loading="lazy" alt={benefit.title} />
         </div>
       </div>;
       })}

@@ -8,7 +8,7 @@ export function ProductsInformation() {
     <S.ProductInformation id="produtos">
       <Container>
         <img
-          loading="eager"
+          loading="lazy"
           className="image-dog hide-mobile-768"
           src="/images/home-produtos-dog.webp"
           alt="Imagem cachorro"
@@ -29,7 +29,7 @@ export function ProductsInformation() {
             <div className="box-categorias dog">
               <div className="text dog">
                 <img
-                  loading="eager"
+                  loading="lazy"
                   className="image-dog show-mobile-768"
                   src="/images/home-produtos-dog.webp"
                   alt="Imagem cachorro"
@@ -60,7 +60,7 @@ export function ProductsInformation() {
             <div className="box-categorias cat">
               <div className="text cat">
                 <img
-                  loading="eager"
+                  loading="lazy"
                   className="image-cat  show-mobile-768"
                   src="/images/home-produtos-cat.webp"
                   alt="Imagem gato"
@@ -91,7 +91,7 @@ export function ProductsInformation() {
         </div>
 
         <img
-          loading="eager"
+          loading="lazy"
           className="image-cat  hide-mobile-768"
           src="/images/home-produtos-cat.webp"
           alt="Imagem gato"

@@ -10,9 +10,10 @@ interface NextImageProps {
   layout: "fill" | "fixed" | "intrinsic" | "responsive" | "raw" | undefined;
   loading?: "eager" | "lazy" | undefined;
   priority?: boolean;
+  alt?: string;
 }
 
-export function NextImage({ src, layout, isBaseUrl, isBaseImageGallery }: NextImageProps) {
+export function NextImage({ src, layout, isBaseUrl, isBaseImageGallery, alt }: NextImageProps) {
   return (
     <S.Image>
       <Image

@@ -82,6 +82,7 @@ export const ProductInformation = styled.section`
 
       .icon-box {
         max-height: 60px;
+        max-width: 65px;
         width: auto;
         object-fit: cover;
       }
