@@ -1,4 +1,4 @@
-import { Head } from "next/document";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
@@ -150,6 +150,17 @@ export default function LocalizacaoPage({
 
   return (
     <Layout>
+       <Head>
+        <title>Onde encontrar</title>
+        <meta name="description" content="Encontre a únidade Raguife mais próxima de você" />
+        <meta itemProp="description" content="Encontre a únidade Raguife mais próxima de você" />
+        <meta name="twitter:description" content="Encontre a únidade Raguife mais próxima de você" />
+        <meta name="og:description" content="Encontre a únidade Raguife mais próxima de você" />
+        <meta property="og:title" content="Onde encontrar"/>
+        <meta property="og:url" content={router.query.pathname?.toString()}/>
+        <link rel="canonical" href={router.pathname} />
+      </Head>
+
       <S.Localizacao>
         <div className="top">
           <Container>
