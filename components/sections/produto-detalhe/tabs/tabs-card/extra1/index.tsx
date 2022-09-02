@@ -9,13 +9,19 @@ export function Extra1({ detail }: DescricaoProps) {
   return (
     <S.TabContent key={detail.extra1}>
       <div className="content paragraph-1-regular">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: detail.extra1
-              ? detail.extra1
-              : "<span className='paragraph-1-medium'>Este produto não possuí descrição</span>",
-          }}
-        ></div>
+        {detail.extra1 && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: detail.extra1,
+            }}
+          ></div>
+        )}
+
+        {!detail.extra1 && (
+          <span className="paragraph-1-medium">
+            Este produto não possuí descrição
+          </span>
+        )}
       </div>
     </S.TabContent>
   );

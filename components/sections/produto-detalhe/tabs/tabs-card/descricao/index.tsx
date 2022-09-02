@@ -8,15 +8,19 @@ export function DescricaoComponent({ detail }: DescricaoProps) {
   return (
     <S.TabContent key={detail.descricao}>
       <div className="content paragraph-1-regular">
-        <p>
-          <strong>Sinopse:</strong>
-        </p>
+        {detail.descricao && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: detail.descricao,
+            }}
+          ></div>
+        )}
 
-        <div
-          dangerouslySetInnerHTML={{
-            __html: detail.descricao ? detail.descricao : "<span className='paragraph-1-medium'>Este produto não possuí descrição</span>",
-          }}
-        ></div>
+        {!detail.descricao && (
+          <span className="paragraph-1-medium">
+            Este produto não possuí descrição
+          </span>
+        )}
       </div>
     </S.TabContent>
   );

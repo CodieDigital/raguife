@@ -39,7 +39,7 @@ export default function TabsSectionComponent({ product }: TabSectionProps) {
     },
     {
       id: 3,
-      title: "Niveis de garantia",
+      title: "Níveis de garantia",
       component: <Extra2 detail={product} />,
     },
     {
