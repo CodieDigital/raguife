@@ -31,6 +31,7 @@ export const Footer = styled.footer`
     display: flex;
 
     img {
+      max-width: inherit;
       width: 100%;
       object-fit: contain;
     }
@@ -40,7 +41,7 @@ export const Footer = styled.footer`
     max-width: 178px;
 
     img {
-      max-width: 100%;
+      max-width: inherit;
       width: 100%;
       object-fit: contain;
     }

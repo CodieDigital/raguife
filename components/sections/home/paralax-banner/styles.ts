@@ -43,7 +43,7 @@ export const ParalaxBanner = styled.section`
 
   .icon {
     max-width: 80px;
-    height: auto;
+    height: 100%;
     width: 100%;
     object-fit: contain;
   }

@@ -9,6 +9,7 @@ export const HomePage = styled.section`
       max-width: 945px;
 
       img {
+        max-width: inherit;
         width: 100%;
         object-fit: contain;
       }
@@ -18,6 +19,7 @@ export const HomePage = styled.section`
       max-width: 700px;
 
       img {
+        max-width: inherit;
         width: 100%;
         object-fit: contain;
       }
