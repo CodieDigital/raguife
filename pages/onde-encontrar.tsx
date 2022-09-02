@@ -159,7 +159,7 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
             <input
               name="search"
               type="text"
-              placeholder="Digite uma localizacao"
+              placeholder="Digite uma localização"
               className="paragraph-1-regular"
               onChange={(e) => HandleSearch(e.target.value)}
             />

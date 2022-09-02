@@ -44,7 +44,6 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
   return (
     <S.Banner heightHeader={heightHeader}>
       <Swiper
-        navigation={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,

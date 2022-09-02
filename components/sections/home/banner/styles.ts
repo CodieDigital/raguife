@@ -35,6 +35,10 @@ export const Banner = styled.section<BannerStyleProps>`
       height: 100vh;
       object-fit: inherit;
       width: 100%;
+
+      img {
+        object-position: center -200px !important;
+      }
     }
   }
 
@@ -125,6 +129,14 @@ export const Banner = styled.section<BannerStyleProps>`
       line-height: 22px;
       margin-bottom: 27px;
     }
+
+    .swiper-banner {
+      .absolute-image {
+        img {
+          object-position: center -100px !important;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1200px) {
@@ -139,12 +151,44 @@ export const Banner = styled.section<BannerStyleProps>`
       line-height: 20px;
       margin-bottom: 24px;
     }
+
+    .swiper-slide {
+      .absolute-image {
+        span {
+          img {
+            object-position: center -85px !important;
+          }
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1024px) {
+    height: 571px;
+
     .bt-banner {
       margin: 26px auto 0;
       font-size: 14px;
+    }
+
+    .hide-mobile {
+      display: none;
+    }
+
+    .show-mobile {
+      display: block !important;
+    }
+
+    .swiper-banner {
+      .absolute-image {
+
+        span {
+          img {
+            object-fit: cover !important;
+            object-position: center center !important;
+          }
+        }
+      }
     }
 
     .scroll {
@@ -158,16 +202,16 @@ export const Banner = styled.section<BannerStyleProps>`
   }
 
   @media only screen and (max-width: 768px) {
+    height: 600px;
+
     .text {
       max-width: 230px;
     }
 
-    .hide-mobile {
-      display: none;
-    }
-
-    .show-mobile {
-      display: block!important;
+    .swiper-banner {
+      .absolute-image {
+        height: 600px;
+      }
     }
 
     .text-banner {
@@ -209,8 +253,16 @@ export const Banner = styled.section<BannerStyleProps>`
   }
 
   @media only screen and (max-width: 500px) {
+    height: 405px;
+
     .text {
       max-width: 160px;
+    }
+
+    .swiper-banner {
+      .absolute-image {
+        height: 405px;
+      }
     }
 
     .bt-banner {

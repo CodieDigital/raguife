@@ -38,6 +38,12 @@ export function FooterComponent() {
                 Contato
               </a>
             </Link>
+
+            <Link href={"/onde-encontrar"} passHref>
+              <a href="replaced" className="link-2-regular">
+                Onde encontrar
+              </a>
+            </Link>
           </div>
 
           <div className="links hide-mobile">
@@ -62,7 +68,7 @@ export function FooterComponent() {
             <LinksContato />
 
             <Link href={"/onde-encontrar"} passHref>
-              <a href="replaced" className="link-2-regular">
+              <a href="replaced" className="link-2-regular show-mobile-1024">
                 Onde encontrar
               </a>
             </Link>

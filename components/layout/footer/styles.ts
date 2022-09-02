@@ -4,6 +4,10 @@ export const Footer = styled.footer`
   background-color: var(--primary-color);
   padding: 70px 0 70px;
 
+  .show-mobile-1024 {
+    display: none;
+  }
+
   .links-contato {
     margin-bottom: 0;
     gap: 0;
@@ -175,6 +179,10 @@ export const Footer = styled.footer`
 
     .hide-mobile {
       display: none;
+    }
+
+    .show-mobile-1024 {
+      display: block;
     }
 
     .redes-sociais {
