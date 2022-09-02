@@ -11,7 +11,6 @@ export default function Page404() {
 
   return (
     <Layout>
-    
       <S.NotFound>
         <Container>
           <p className="title-4-bold">Página não encontrada ;(</p>

@@ -13,7 +13,6 @@ export default function ContactSucessPage() {
 
   return (
     <Layout>
- 
       <S.Sucess>
         <div className="card-success">
           <h2 className="title-5-bold">Contato enviado com sucesso</h2>
