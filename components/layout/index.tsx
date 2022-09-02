@@ -1,7 +1,8 @@
 import { HeaderComponent } from "./header";
 import { FooterComponent } from "./footer";
-import * as S from "./styles";
 import { ButtonWhats } from "./btn-whats";
+
+import * as S from "./styles";
 
 interface LayoutProps {
   children?: React.ReactNode;

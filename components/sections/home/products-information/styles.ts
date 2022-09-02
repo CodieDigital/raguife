@@ -360,13 +360,21 @@ export const ProductInformation = styled.section`
       }
     }
 
-    .image-cat,
     .image-dog {
       position: absolute;
       bottom: -20px;
-      right: -25px;
-      max-height: 90px;
-      max-width: 55px;
+      right: -35px;
+      max-height: 105px;
+      max-width: 65px;
+      height: auto;
+    }
+
+    .image-cat {
+      position: absolute;
+      bottom: -20px;
+      left: -35px;
+      max-height: 105px;
+      max-width: 65px;
       height: auto;
     }
   }
@@ -451,8 +459,8 @@ export const ProductInformation = styled.section`
 
     .image-cat,
     .image-dog {
-      max-width: 45px;
-      max-height: 70px;
+      max-width: 55px;
+      max-height: 85px;
     }
   }
 
@@ -494,10 +502,16 @@ export const ProductInformation = styled.section`
 
     .image-cat,
     .image-dog {
-      max-width: 33px;
-      bottom: -10px;
-      right: -15px;
-      max-height: 51px;
+      max-width: 45px;
+      max-height: 70px;
+    }
+
+    .image-dog {
+      right: -20px;
+    }
+
+    .image-cat {
+      left: -25px;
     }
   }
 `;

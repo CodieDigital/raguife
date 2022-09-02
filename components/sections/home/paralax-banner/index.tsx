@@ -20,7 +20,6 @@ export function ParalaxBanner() {
           reduzir o volume a odor das fezes. Não utilizamos conservantes,
           corantes e aromatizantes artificiais.
         </p>
-
         <ButtonComponent text={"Saiba mais sobre nós"} href={"/quem-somos"} />
       </Container>
     </S.ParalaxBanner>
