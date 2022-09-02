@@ -4,13 +4,14 @@ import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 import GoogleMapReact from "google-map-react";
 
-import { GetUnidades, ListUnits, UnidadesProps } from "src/services/getUnidades";
+import {
+  GetUnidades,
+  ListUnits,
+  UnidadesProps,
+} from "src/services/getUnidades";
 
 import { Layout } from "components/layout";
 import { Container } from "components/data/container";
-
-import * as S from "styles/pages/localizacao";
-
 
 const AnyReactComponent = ({ ...rest }) => (
   <svg
@@ -52,7 +53,11 @@ interface LocalizacaoPageProps {
   mapPoints: UnidadesProps;
 }
 
-export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageProps) {
+import * as S from "styles/pages/localizacao";
+
+export default function LocalizacaoPage({
+  mapPoints: { items },
+}: LocalizacaoPageProps) {
   const [mapPointsState, setMapPointsState] = useState(items);
   const [mapsState, setMapsState] = useState<{ map: any; maps: any } | null>(
     null
@@ -67,8 +72,10 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
 
   const router = useRouter();
   async function HandleSearch(value) {
-    const searchLocalization = items.filter((point) =>
-      point.cidade.toLowerCase().includes(value.toLowerCase()) || point.rua.toLowerCase().includes(value.toLowerCase())
+    const searchLocalization = items.filter(
+      (point) =>
+        point.cidade.toLowerCase().includes(value.toLowerCase()) ||
+        point.rua.toLowerCase().includes(value.toLowerCase())
     );
     if (searchLocalization) {
       setMapPointsState(searchLocalization);
@@ -139,36 +146,10 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
       apiIsLoaded(mapsState.map, mapsState.maps, mapPointsState[0]);
     }
   }, [mapPointsState, defaultProps.zoom]);
+
+
   return (
     <Layout>
-      <Head>
-        <title>Onde encontrar</title>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="description" content="Confira onde encontrar a únidade Raguife mais perto de você" />
-        <meta itemProp="description" content="Confira onde encontrar a únidade Raguife mais perto de você" />
-        <meta name="twitter:description" content="Confira onde encontrar a únidade Raguife mais perto de você" />
-        <meta name="og:description" content="Confira onde encontrar a únidade Raguife mais perto de você" />
-        <meta property="og:title" content="Confira onde encontrar a únidade Raguife mais perto de você"/>
-        <meta property="og:locale" content="pt_BR"/>
-        <meta property="og:type" content="website"/>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="content-language" content="pt-br"/>
-        <meta name="rating" content="general"/>
-        <meta name="distribution" content="global"/>
-        <meta name="copyright" content="Codie"/>
-        <meta name="author" content="Codie" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index,follow"/>
-        <link rel="canonical" href={router.pathname} />
-        <meta name="referrer" content="origin" />
-        <meta name="language" content="portuguese, PT"/>
-        <meta name="location" content="Londrina, Paraná"/>
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="keyboard-shortcuts-preference" content="all"/>
-      </Head>
-      
       <S.Localizacao>
         <div className="top">
           <Container>
@@ -206,7 +187,9 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
                 Limpar rota
               </a>
             )}
-            {mapPointsState.length === 0 && <p className="paragraph-1-medium">Nenhuma loja encontrada</p>}
+            {mapPointsState.length === 0 && (
+              <p className="paragraph-1-medium">Nenhuma loja encontrada</p>
+            )}
 
             <div className="cards-results">
               {mapPointsState.map((card) => {
@@ -259,7 +242,7 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
                       </div>
                     )}
                     <button
-                    className="link-2-regular"
+                      className="link-2-regular"
                       type="button"
                       onClick={() => {
                         getLocation(card);
