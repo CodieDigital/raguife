@@ -153,7 +153,6 @@ export default function LocalizacaoPage({ mapPoints: {items} }: LocalizacaoPageP
         <meta property="og:title" content="Confira onde encontrar a únidade Raguife mais perto de você"/>
         <meta property="og:locale" content="pt_BR"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content={router.query.pathname?.toString()}/>
         <link rel="icon" href="/favicon.ico" />
         <meta name="content-language" content="pt-br"/>
         <meta name="rating" content="general"/>
