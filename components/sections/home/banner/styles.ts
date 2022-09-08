@@ -37,7 +37,7 @@ export const Banner = styled.section<BannerStyleProps>`
       width: 100%;
 
       img {
-        object-position: center -200px !important;
+        object-position: center -100px !important;
       }
     }
   }
