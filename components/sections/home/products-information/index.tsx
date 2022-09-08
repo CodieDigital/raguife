@@ -1,5 +1,6 @@
 import { ButtonComponent } from "components/data/button";
 import { Container } from "components/data/container";
+import { NextImage } from "components/data/NextImage";
 
 import * as S from "./styles";
 
@@ -7,12 +8,14 @@ export function ProductsInformation() {
   return (
     <S.ProductInformation id="produtos">
       <Container>
-        <img
-          loading="lazy"
-          className="image-dog hide-mobile-768"
-          src="/images/home-produtos-dog.webp"
-          alt="Imagem cachorro"
-        />
+        <div className="image-dog hide-mobile-768">
+          <NextImage
+            loading="lazy"
+            src="/images/home-produtos-dog.webp"
+            alt="Imagem cachorro"
+            layout="fill"
+          />
+        </div>
 
         <div className="content">
           <div className="title">
@@ -28,19 +31,23 @@ export function ProductsInformation() {
           <div className="grid-categorias">
             <div className="box-categorias dog">
               <div className="text dog">
-                <img
-                  loading="lazy"
-                  className="image-dog show-mobile-768"
-                  src="/images/home-produtos-dog.webp"
-                  alt="Imagem cachorro"
-                />
+                <div className="image-dog show-mobile-768">
+                  <NextImage
+                    loading="lazy"
+                    src="/images/home-produtos-dog.webp"
+                    alt="Imagem cachorro"
+                    layout="fill"
+                  />
+                </div>
 
                 <div className="top">
-                  <img
-                    className="icon-box"
-                    src="/images/icon-dog.png"
-                    alt="Icone cachorro"
-                  />
+                  <div className="icon-box">
+                    <NextImage
+                      layout="fill"
+                      src="/images/icon-dog.png"
+                      alt="Icone cachorro"
+                    />
+                  </div>
 
                   <h3 className="-bold">Cães</h3>
                 </div>
@@ -59,19 +66,23 @@ export function ProductsInformation() {
 
             <div className="box-categorias cat">
               <div className="text cat">
-                <img
-                  loading="lazy"
-                  className="image-cat  show-mobile-768"
-                  src="/images/home-produtos-cat.webp"
-                  alt="Imagem gato"
-                />
+                <div className="image-cat show-mobile-768">
+                  <NextImage
+                    loading="lazy"
+                    src="/images/home-produtos-cat.webp"
+                    alt="Imagem gato"
+                    layout="fill"
+                  />
+                </div>
 
                 <div className="top">
-                  <img
-                    className="icon-box"
-                    src="/images/icon-cat.png"
-                    alt="Icone gato"
-                  />
+                  <div className="icon-box">
+                    <NextImage
+                      layout="fill"
+                      src="/images/icon-cat.png"
+                      alt="Icone cachorro"
+                    />
+                  </div>
 
                   <h3 className="-bold">Gatos</h3>
                 </div>
@@ -89,13 +100,14 @@ export function ProductsInformation() {
             </div>
           </div>
         </div>
-
-        <img
-          loading="lazy"
-          className="image-cat  hide-mobile-768"
-          src="/images/home-produtos-cat.webp"
-          alt="Imagem gato"
-        />
+        <div className="image-cat hide-mobile-768">
+          <NextImage
+            loading="lazy"
+            src="/images/home-produtos-cat.webp"
+            alt="Imagem gato"
+            layout="fill"
+          />
+        </div>
       </Container>
     </S.ProductInformation>
   );

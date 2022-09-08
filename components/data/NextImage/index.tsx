@@ -10,7 +10,7 @@ interface NextImageProps {
   layout: "fill" | "fixed" | "intrinsic" | "responsive" | "raw" | undefined;
   loading?: "eager" | "lazy" | undefined;
   priority?: boolean;
-  alt?: string;
+  alt: string;
 }
 
 export function NextImage({ src, layout, isBaseUrl, isBaseImageGallery, alt }: NextImageProps) {
@@ -18,7 +18,7 @@ export function NextImage({ src, layout, isBaseUrl, isBaseImageGallery, alt }: N
     <S.Image>
       <Image
         src={src ? (isBaseUrl ? baseImage + src : isBaseImageGallery ?  baseImageGallery + src : src) : "/images/default-image.webp"}
-        layout={layout}
+        layout={layout} alt={alt}
       />
     </S.Image>
   );

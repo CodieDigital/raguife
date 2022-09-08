@@ -16,7 +16,7 @@ export function BenefitsCard({ cardBenefits }: BenefitsCardProps) {
     <S.BenefitsCard>
       <React.Fragment key={cardBenefits.id + cardBenefits.titulo}>
         <div className="image">
-          <NextImage layout="fill" src={cardBenefits.imagem} isBaseUrl/>
+          <NextImage alt="Imagem produto" layout="fill" src={cardBenefits.imagem} isBaseUrl/>
         </div>
 
         <div className="text">

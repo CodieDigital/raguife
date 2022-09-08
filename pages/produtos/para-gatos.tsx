@@ -51,8 +51,8 @@ export default function ShopDogPage({ products, categories }: ShopPageProps) {
   return (
     <Layout>
       <Head>
-      <title>Para gatos</title>
-        <meta property="og:url" content={router.query.pathname?.toString()}/>
+        <title>Para gatos</title>
+        <meta property="og:url" content={router.query.pathname?.toString()} />
         <link rel="canonical" href={router.pathname} />
       </Head>
 

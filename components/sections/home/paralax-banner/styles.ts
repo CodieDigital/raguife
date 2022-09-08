@@ -45,7 +45,10 @@ export const ParalaxBanner = styled.section`
     max-width: 80px;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+
+    img {
+      object-fit: contain!important;
+    }
   }
 
   p {
@@ -150,7 +153,7 @@ export const ParalaxBanner = styled.section`
       max-width: 630px;
     }
 
-    p+*{
+    p + * {
       margin-top: 15px;
     }
 
@@ -166,7 +169,6 @@ export const ParalaxBanner = styled.section`
     height: 320px;
 
     .title {
-
       h2 {
         line-height: 35px;
       }
@@ -178,7 +180,6 @@ export const ParalaxBanner = styled.section`
     height: 300px;
 
     .title {
-
       .icon {
         max-width: 40px;
       }
@@ -199,7 +200,6 @@ export const ParalaxBanner = styled.section`
     height: 270px;
 
     .title {
-
       .icon {
         max-width: 35px;
       }
@@ -221,7 +221,7 @@ export const ParalaxBanner = styled.section`
     }
   }
 
-  @media only screen and (max-width:400px) {
+  @media only screen and (max-width: 400px) {
     .title {
       gap: 2px;
       .icon {
@@ -233,11 +233,11 @@ export const ParalaxBanner = styled.section`
       }
     }
 
-    p{
+    p {
       font-size: 10px;
     }
 
-    p+*{
+    p + * {
       margin-top: 12px;
     }
 

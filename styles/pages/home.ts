@@ -7,21 +7,23 @@ export const HomePage = styled.section`
 
     .image {
       max-width: 945px;
+      width: 100%;
 
       img {
         max-width: inherit;
         width: 100%;
-        object-fit: contain;
+        object-fit: contain!important;
       }
     }
 
     .text {
       max-width: 700px;
+      width: 100%;
 
       img {
         max-width: inherit;
         width: 100%;
-        object-fit: contain;
+        object-fit: contain!important;
       }
     }
   }

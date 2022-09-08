@@ -1,5 +1,6 @@
 import { ButtonComponent } from "components/data/button";
 import { Container } from "components/data/container";
+import { NextImage } from "components/data/NextImage";
 import * as S from "./styles";
 
 export function ParalaxBanner() {
@@ -7,7 +8,14 @@ export function ParalaxBanner() {
     <S.ParalaxBanner>
       <Container>
         <div className="title">
-          <img src="/images/icon-selo.png" loading="lazy" alt="Icone selo" className="icon" />
+          <div className="icon">
+            <NextImage
+              src="/images/icon-selo.png"
+              loading="lazy"
+              alt="Icone selo"
+              layout="fill"
+            />
+          </div>
 
           <h2 className="title-4-bold capitalize">
             Formulado por especialistas

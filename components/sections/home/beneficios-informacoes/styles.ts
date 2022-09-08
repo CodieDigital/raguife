@@ -23,10 +23,11 @@ export const BeneficionsInformacoes = styled.section`
 
   .image {
     max-width: 945px;
+    width: 100%;
 
     img {
-      width: 100%;
-      object-fit: contain;
+      width: 100%!important;
+      object-fit: contain!important;
     }
   }
 

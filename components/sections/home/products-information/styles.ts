@@ -39,16 +39,21 @@ export const ProductInformation = styled.section`
     object-fit: contain;
     position: relative;
     z-index: 5;
-    height: 100%;
+
+    img {
+      object-fit: contain !important;
+    }
   }
 
   .image-cat {
     max-width: 10.16vw;
     width: 100%;
-    object-fit: contain;
     position: relative;
     z-index: 5;
-    height: 100%;
+
+    img {
+      object-fit: contain !important;
+    }
   }
 
   .text {
@@ -84,8 +89,10 @@ export const ProductInformation = styled.section`
         max-height: 60px;
         max-width: 65px;
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+
+        img {
+          object-fit: contain !important;
+        }
       }
 
       .top + *,

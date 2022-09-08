@@ -18,6 +18,7 @@ import { Banner } from "components/sections/home/banner";
 import { DestaquesProdutosComponent } from "../components/layout/DestaquesProdutos";
 
 import * as S from "../styles/pages/home";
+import { NextImage } from "components/data/NextImage";
 
 interface HomeProps {
   products: ProductProps;
@@ -62,11 +63,11 @@ export default function HomePage({
         <div className="image-text">
           <div className="container-text-image">
             <div className="image">
-              <img src="/images/text-image-4.webp" loading="lazy"  alt="Cachorro e gato" />
+              <NextImage layout="fill" src="/images/text-image-4.webp" loading="lazy"  alt="Cachorro e gato" />
             </div>
 
             <div className="text">
-              <img src="/images/image-text-home.png" loading="lazy" alt="Texto" />
+              <NextImage layout="fill" src="/images/image-text-home.png" loading="lazy" alt="Texto" />
             </div>
           </div>
         </div>

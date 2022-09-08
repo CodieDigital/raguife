@@ -1,3 +1,4 @@
+import { NextImage } from "components/data/NextImage";
 import { DataBenefits } from "./data";
 import * as S from "./styles";
 
@@ -15,7 +16,7 @@ export function BeneficiosInformacoes() {
               </div>
 
               <div className="image">
-                <img src={benefit.image} loading="lazy" alt={benefit.title} />
+                <NextImage layout="fill" src={benefit.image} loading="lazy" alt={benefit.title} />
               </div>
             </div>
           );
@@ -29,9 +30,9 @@ export function BeneficiosInformacoes() {
         </div>
 
         <div className="image">
-          <img src={benefit.image} loading="lazy" alt={benefit.title} />
+          <NextImage layout="fill" src={benefit.image} loading="lazy" alt={benefit.title} />
         </div>
-      </div>;
+      </div>
       })}
     </S.BeneficionsInformacoes>
   );

@@ -77,7 +77,7 @@ export default function DetailProductPage({
                   className="icon-selo"
                   alt="Icone selo 100% satisfacão"
                 />
-                <NextImage layout="fill" isBaseUrl src={detail.imagem} />
+                <NextImage alt="imagem produto" layout="fill" isBaseUrl src={detail.imagem} />
               </div>
             </div>
 
