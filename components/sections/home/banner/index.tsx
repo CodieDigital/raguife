@@ -24,11 +24,6 @@ interface BannerProps {
 
 export const BannerComponent = ({ listBanners }: BannerProps) => {
   const [heightHeader, setHeightHeader] = useState("");
-  const scrollToSection = () =>
-    window.scrollTo({
-      top: 100,
-      behavior: "smooth",
-    });
 
   useEffect(() => {
     if (process.browser) {

@@ -8,18 +8,18 @@ interface LayoutProps {
   children?: React.ReactNode;
 }
 
-export function Layout({
-  children
-}: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <S.Layout>
-      <HeaderComponent/>
+      <HeaderComponent />
 
-      <ButtonWhats/>
+      <button className="cmp-revoke-consent">Revoke Consent</button>
+
+      <ButtonWhats />
 
       {children}
 
-      <FooterComponent/>
+      <FooterComponent />
     </S.Layout>
   );
 }

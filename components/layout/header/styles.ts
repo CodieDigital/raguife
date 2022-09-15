@@ -152,6 +152,7 @@ export const Header = styled.header`
 
   .logo {
     max-width: 192px;
+    width: 100%;
 
     img {
       max-width: inherit;

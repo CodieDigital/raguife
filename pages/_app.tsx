@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { AppProps } from "next/app";
+import Script from "next/script";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,16 +11,18 @@ import "../styles/reset.css";
 import "../styles/fonts.css";
 
 import { GlobalStyle } from "../styles/global";
-import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter();
-
+const App = async ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
+        <script
+          type="text/javascript"
+          src="https://cdn-prod.securiti.ai/consent/auto_blocking/472025cc-d8b2-4bf5-aeee-8dad3027a5f9/c4786817-5ab4-4776-a7a8-66106459964e.js"
+        ></script>
         <title>Raguife</title>
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
@@ -40,10 +43,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="author" content="Codie" />
         <meta name="rating" content="general" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn-prod.securiti.ai/consent/cookie-consent.css"
+        />
       </Head>
-
       <GlobalStyle />
-
       <Component {...pageProps} />
     </>
   );

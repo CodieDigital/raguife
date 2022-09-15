@@ -38,14 +38,24 @@ export default function HomePage({
       <Head>
         <title>{information.head.pageTitle}</title>
         <meta name="description" content={information.head.metaDescription} />
-        <meta itemProp="description" content={information.head.metaDescription} />
-        <meta name="twitter:description" content={information.head.metaDescription} />
-        <meta name="og:description" content={information.head.metaDescription} />
-        <meta property="og:title" content={information.head.pageTitle}/>
-        <meta property="og:image" content={information.head.imageOpenGraph}/>
+        <meta
+          itemProp="description"
+          content={information.head.metaDescription}
+        />
+        <meta
+          name="twitter:description"
+          content={information.head.metaDescription}
+        />
+        <meta
+          name="og:description"
+          content={information.head.metaDescription}
+        />
+        <meta property="og:title" content={information.head.pageTitle} />
+        <meta property="og:image" content={information.head.imageOpenGraph} />
       </Head>
 
       <S.HomePage>
+
         <BannerComponent listBanners={banners} />
 
         <ProductsInformation />
@@ -63,11 +73,21 @@ export default function HomePage({
         <div className="image-text">
           <div className="container-text-image">
             <div className="image">
-              <NextImage layout="fill" src="/images/text-image-4.webp" loading="lazy"  alt="Cachorro e gato" />
+              <NextImage
+                layout="fill"
+                src="/images/text-image-4.webp"
+                loading="lazy"
+                alt="Cachorro e gato"
+              />
             </div>
 
             <div className="text">
-              <NextImage layout="fill" src="/images/image-text-home.png" loading="lazy" alt="Texto" />
+              <NextImage
+                layout="fill"
+                src="/images/image-text-home.png"
+                loading="lazy"
+                alt="Texto"
+              />
             </div>
           </div>
         </div>

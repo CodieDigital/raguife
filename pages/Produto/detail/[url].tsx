@@ -51,7 +51,7 @@ export default function DetailProductPage({
   return (
     <Layout>
       <Head>
-      <title>{head.pageTitle}</title>
+        <title>{head.pageTitle}</title>
         <meta name="description" content={head.metaDescription} />
         <meta itemProp="description" content={head.metaDescription} />
         <meta name="twitter:description" content={head.metaDescription} />
