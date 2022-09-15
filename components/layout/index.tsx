@@ -13,8 +13,6 @@ export function Layout({ children }: LayoutProps) {
     <S.Layout>
       <HeaderComponent />
 
-      <button className="cmp-revoke-consent">Revoke Consent</button>
-
       <ButtonWhats />
 
       {children}
