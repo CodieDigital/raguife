@@ -54,6 +54,7 @@ interface LocalizacaoPageProps {
 }
 
 import * as S from "styles/pages/localizacao";
+import { NotFound } from "styles/pages/notfound";
 
 export default function LocalizacaoPage({
   mapPoints: { items },
@@ -147,17 +148,28 @@ export default function LocalizacaoPage({
     }
   }, [mapPointsState, defaultProps.zoom]);
 
-
   return (
     <Layout>
-       <Head>
+      <Head>
         <title>Onde encontrar</title>
-        <meta name="description" content="Encontre a únidade Raguife mais próxima de você" />
-        <meta itemProp="description" content="Encontre a únidade Raguife mais próxima de você" />
-        <meta name="twitter:description" content="Encontre a únidade Raguife mais próxima de você" />
-        <meta name="og:description" content="Encontre a únidade Raguife mais próxima de você" />
-        <meta property="og:title" content="Onde encontrar"/>
-        <meta property="og:url" content={router.query.pathname?.toString()}/>
+        <meta
+          name="description"
+          content="Encontre a únidade Raguife mais próxima de você"
+        />
+        <meta
+          itemProp="description"
+          content="Encontre a únidade Raguife mais próxima de você"
+        />
+        <meta
+          name="twitter:description"
+          content="Encontre a únidade Raguife mais próxima de você"
+        />
+        <meta
+          name="og:description"
+          content="Encontre a únidade Raguife mais próxima de você"
+        />
+        <meta property="og:title" content="Onde encontrar" />
+        <meta property="og:url" content={router.query.pathname?.toString()} />
         <link rel="canonical" href={router.pathname} />
       </Head>
 
@@ -297,11 +309,20 @@ export default function LocalizacaoPage({
   );
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const responseProducts = await GetUnidades(ctx);
+  const responseUnidades = await GetUnidades(ctx);
+
+  if (responseUnidades) {
+    return {
+      props: {
+        banner: [],
+      },
+      notFound: true,
+    };
+  }
 
   return {
     props: {
-      mapPoints: responseProducts,
+      mapPoints: responseUnidades,
     },
   };
 };
