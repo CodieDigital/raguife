@@ -31,11 +31,17 @@ html {
   left: 20px;
   padding: 0;
   z-index: 5;
+  opacity: .7;
+  transition: .4s;
 
   svg {
     width: 28px;
     fill: #fff;
   }
+}
+
+.cmp-revoke-consent:hover {
+  opacity: 1;
 }
 
 body {
