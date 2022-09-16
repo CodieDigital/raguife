@@ -30,6 +30,7 @@ html {
   bottom: 20px;
   left: 20px;
   padding: 0;
+  z-index: 5;
 
   svg {
     width: 28px;
@@ -123,11 +124,35 @@ ul {
     .container {
       max-width: 1280px;
     }
+
+    .cmp-revoke-consent{
+      height: 55px;
+      width: 55px;
+      bottom: 19px;
+      left: 19px;
+
+      svg {
+        width: 25px;
+        fill: #fff;
+      }
+    }
   }
 
   @media only screen and (max-width:1400px) {
     .container {
       max-width: 1080px;
+    }
+
+    .cmp-revoke-consent{
+      height: 52px;
+      width: 52px;
+      bottom: 18px;
+      left: 18px;
+
+      svg {
+        width: 23.5px;
+        fill: #fff;
+      }
     }
   }
 
@@ -135,11 +160,35 @@ ul {
     .container {
       max-width: 980px;
     }
+
+    .cmp-revoke-consent{
+      height: 49px;
+      width: 49px;
+      bottom: 17px;
+      left: 17px;
+
+      svg {
+        width: 23px;
+        fill: #fff;
+      }
+    }
   }
 
   @media only screen and (max-width:1024px) {
     .container {
       max-width: 840px;
+    }
+
+    .cmp-revoke-consent{
+      height: 46px;
+      width: 46px;
+      bottom: 16px;
+      left: 16px;
+
+      svg {
+        width: 22px;
+        fill: #fff;
+      }
     }
   }
 
@@ -169,11 +218,34 @@ ul {
       max-width: 640px;
     }
     
+    .cmp-revoke-consent{
+      height: 42px;
+      width: 42px;
+      bottom: 15.5px;
+      left: 15.5px;
+
+      svg {
+        width: 19px;
+        fill: #fff;
+      }
+    }
   }
 
   @media only screen and (max-width:500px) {
     .container {
       max-width: 95%;
+    }
+
+    .cmp-revoke-consent{
+      height: 38px;
+      width: 38px;
+      bottom: 13.5px;
+      left: 13.5px;
+
+      svg {
+        width: 16px;
+        fill: #fff;
+      }
     }
   }
 `;
