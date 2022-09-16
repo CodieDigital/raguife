@@ -36,6 +36,8 @@ export const BannerComponent = ({ listBanners }: BannerProps) => {
     }
   }, []);
 
+  console.log(heightHeader)
+
   return (
     <S.Banner heightHeader={heightHeader}>
       <Swiper

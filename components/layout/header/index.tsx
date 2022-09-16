@@ -3,7 +3,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { Container, NextImage, RedesSociasComponent } from "components/data/components";
+import {
+  Container,
+  NextImage,
+  RedesSociasComponent,
+} from "components/data/components";
 
 import * as S from "./styles";
 
@@ -91,7 +95,7 @@ export function HeaderComponent() {
       <Container>
         <Link href={"/"} passHref>
           <a href="replaced" className="logo">
-            <NextImage layout="fill" src="/images/logo.png" alt="Logo header" />
+            <img src="/images/logo.png" alt="Logo header" />
           </a>
         </Link>
 

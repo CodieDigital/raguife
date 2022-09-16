@@ -155,7 +155,6 @@ export const Header = styled.header`
     width: 100%;
 
     img {
-      max-width: inherit;
       width: 100%;
       object-fit: contain;
     }

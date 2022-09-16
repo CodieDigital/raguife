@@ -17,6 +17,26 @@ html {
     scroll-behavior: smooth !important;
 }
 
+.cmp-revoke-consent{
+  position: fixed;
+  background-color: #237afc;
+  border: unset;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  bottom: 20px;
+  left: 20px;
+  padding: 0;
+
+  svg {
+    width: 28px;
+    fill: #fff;
+  }
+}
+
 body {
   background-color: var(--primary-color);
     overflow-x: hidden !important;
