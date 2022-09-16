@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth !important;
 }
 
+.cmp-revoke-consent {
+  position: fixed;
+  z-index: 99;
+}
+
 body {
   background-color: var(--primary-color);
     overflow-x: hidden !important;
