@@ -31,13 +31,11 @@ export async function GetUnidades(
 ) {
   if (router) {
     const { data } = await api.get<UnidadesProps>(`/Loja/list/GetAll`);
-    console.log(data)
 
     if (data) {
       return data;
     }
 
-
-    return { point: [] };
+    return null;
   }
 }

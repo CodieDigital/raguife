@@ -93,8 +93,8 @@ export function ProductsInformation() {
                 </p>
 
                 <ButtonComponent
-                  text={"ver produtos para cães"}
-                  href={"/produtos/para-caes"}
+                  text={"ver produtos para gatos"}
+                  href={"/produtos/para-gatos"}
                 />
               </div>
             </div>

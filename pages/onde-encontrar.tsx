@@ -311,18 +311,27 @@ export default function LocalizacaoPage({
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const responseUnidades = await GetUnidades(ctx);
 
-  if (responseUnidades) {
+  if (!responseUnidades) {
     return {
       props: {
-        banner: [],
+        mapPoints: [],
       },
       notFound: true,
     };
   }
 
+  const newUnidadeList = {
+    ...responseUnidades,
+    items: responseUnidades.items.map((u) => ({
+      ...u,
+      latitude: u.latitude.replaceAll(" ", ""),
+      longitude: u.longitude.replaceAll(" ", ""),
+    })),
+  };
+
   return {
     props: {
-      mapPoints: responseUnidades,
+      mapPoints: newUnidadeList,
     },
   };
 };
