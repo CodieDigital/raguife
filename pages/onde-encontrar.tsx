@@ -13,34 +13,7 @@ import {
 import { Layout } from "components/layout";
 import { Container } from "components/data/container";
 
-const AnyReactComponent = ({ ...rest }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="62"
-    height="80"
-    viewBox="0 0 62 80"
-  >
-    <g>
-      <g>
-        <g>
-          <path
-            fill="#65C71C"
-            d="M4.066 46.382A30.99 30.99 0 0 1 0 30.986C0 13.873 13.79 0 30.8 0 47.81 0 61.6 13.873 61.6 30.986a30.98 30.98 0 0 1-4.423 16.007C48.695 64.29 30.801 80 30.801 80S12.39 64.03 4.066 46.382z"
-          />
-        </g>
-        <g>
-          <path
-            fill="none"
-            stroke="#fff"
-            stroke-miterlimit="20"
-            stroke-width="1.2"
-            d="M11.844 47.36c2.232-10.414 8.262-19.552 14.288-26.162C32.466 14.252 37.617 8.784 38.62 9.773c1.038 1.024-.824 6.778-1.164 8.972 3.232.839 3.78 1.735 4.799 3.599 1.125 2.055 2.792 2.38 4.688 2.693 1.615.266 2.795.12 2.816 1.952.003.317-.1 1.875-.23 2.301-.458 1.505-.91 2.53-3.993 2.729-3.115.2-5.253-.226-6.572 2.787-.517 1.18-1.03 3.37-1.229 4.756-.246 1.716-.49 3.374-.458 7.652h-5.478c-1.042 0-2.317.12-2.317-3.588 0-4.77.27-4.489.666-4.53.238-.026 1.749-.073 2.885-.073.839-.001 1.505-.105 1.88-.547.6-.708 1.792-1.89 1.572-2.99-.078-.39-.299-.879-.729-1.296-.85-.825-2.109-1.572-2.046-2.91.069-1.474-1.319-2.327-2.536-3.27l1.666-3.48v0s.284-.43.042-.728c-.331-.408-.739-.135-1.333.125-6.573 2.877-12.954 10.18-15.615 21.91a1.958 1.958 0 0 1-1.91 1.522z"
-          />
-        </g>
-      </g>
-    </g>
-  </svg>
-);
+
 interface Point {
   latitude: string;
   longitude: string;
@@ -55,6 +28,7 @@ interface LocalizacaoPageProps {
 
 import * as S from "styles/pages/localizacao";
 import { NotFound } from "styles/pages/notfound";
+import { AnyReactComponent } from "components/data/map-icon";
 
 export default function LocalizacaoPage({
   mapPoints: { items },
@@ -72,6 +46,7 @@ export default function LocalizacaoPage({
   });
 
   const router = useRouter();
+
   async function HandleSearch(value) {
     const searchLocalization = items.filter(
       (point) =>
@@ -84,11 +59,13 @@ export default function LocalizacaoPage({
       setMapPointsState(items);
     }
   }
+
   function getLocation(card: ListUnits) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((e) => showPosition(card, e));
     }
   }
+
   async function showPosition(card, position) {
     await router.replace({
       pathname: "/onde-encontrar",
@@ -101,6 +78,7 @@ export default function LocalizacaoPage({
     });
     router.reload();
   }
+
   const apiIsLoaded = (map, maps, search) => {
     if (search) {
       const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -142,11 +120,26 @@ export default function LocalizacaoPage({
       );
     }
   };
+
   useEffect(() => {
     if (mapPointsState.length === 1 && mapsState) {
       apiIsLoaded(mapsState.map, mapsState.maps, mapPointsState[0]);
     }
   }, [mapPointsState, defaultProps.zoom]);
+
+  useEffect(() => {
+    if(process.browser) {
+      const teste = document.querySelectorAll(".icon");
+
+      teste.forEach((t: any) => {
+        t.style.position = "absolute"
+        t.style.top = "50%" 
+        t.style.left = "50%" 
+        t.style.transform = "translate(-50%, -111%)" 
+        t.style.top = "50%" 
+      })
+    }
+  }, [defaultProps.zoom])
 
   return (
     <Layout>
@@ -293,10 +286,16 @@ export default function LocalizacaoPage({
                 });
                 apiIsLoaded(map, maps, null);
               }}
+              onChange={(e) => setDefaultProps((oldState) => ({...oldState, zoom: e.zoom}))}
             >
-              {mapPointsState.map((point) => (
+              <AnyReactComponent
+                  lat={-23.3197}
+                  lng={-51.1662}
+                />
+
+              {mapPointsState.map((point, index) => (
                 <AnyReactComponent
-                  key={point.latitude + point.longitude + "point"}
+                  key={point.latitude + point.longitude + "point" + index}
                   lat={point.latitude}
                   lng={point.longitude}
                 />
