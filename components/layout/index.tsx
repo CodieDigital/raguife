@@ -13,7 +13,7 @@ export function Layout({ children }: LayoutProps) {
     <S.Layout>
       <HeaderComponent />
 
-      <ButtonWhats />
+      {/* <ButtonWhats /> */}
 
       {children}
 
