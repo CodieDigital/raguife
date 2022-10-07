@@ -128,7 +128,6 @@ export default function LocalizacaoPage({
   }, [mapPointsState, defaultProps.zoom]);
 
   useEffect(() => {
-    if(process.browser) {
       const teste = document.querySelectorAll(".icon");
 
       teste.forEach((t: any) => {
@@ -138,8 +137,7 @@ export default function LocalizacaoPage({
         t.style.transform = "translate(-50%, -111%)" 
         t.style.top = "50%" 
       })
-    }
-  }, [defaultProps.zoom])
+  }, [mapsState])
 
   return (
     <Layout>
@@ -288,11 +286,6 @@ export default function LocalizacaoPage({
               }}
               onChange={(e) => setDefaultProps((oldState) => ({...oldState, zoom: e.zoom}))}
             >
-              <AnyReactComponent
-                  lat={-23.3197}
-                  lng={-51.1662}
-                />
-
               {mapPointsState.map((point, index) => (
                 <AnyReactComponent
                   key={point.latitude + point.longitude + "point" + index}
