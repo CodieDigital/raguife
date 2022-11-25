@@ -2,7 +2,6 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import { ServerStyleSheet } from "styled-components";
 
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const sheet = new ServerStyleSheet();
@@ -37,6 +36,17 @@ export default class MyDocument extends Document {
           <Head></Head>
 
           <body>
+            {/* <!-- Google Tag Manager (noscript) --> */}
+            <noscript>
+              <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-M2XJ66S"
+                height="0"
+                width="0"
+                style={{ display: "none;", visibility: "hidden" }}
+              ></iframe>
+            </noscript>
+            {/* <!-- End Google Tag Manager (noscript) --> */}
+            
             <Main />
 
             <NextScript />
