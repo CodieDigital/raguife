@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Footer = styled.footer`
   background-color: var(--primary-color);
-  padding: 70px 0 70px;
+  padding: 70px 0 8px;
+  z-index: 100;
+  position: relative;
 
   .show-mobile-1024 {
     display: none;
@@ -81,8 +83,27 @@ export const Footer = styled.footer`
     }
   }
 
+  .barra-footer {
+    margin-top: 50px;
+
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    a:hover {
+      color: var(--tertiary-color);
+    }
+  }
+
   @media only screen and (max-width: 1600px) {
-    padding: 55px 0 65px;
+    padding: 55px 0 8px;
 
     .logo-pets {
       max-width: 230px;
@@ -90,7 +111,7 @@ export const Footer = styled.footer`
   }
 
   @media only screen and (max-width: 1400px) {
-    padding: 45px 0 60px;
+    padding: 45px 0 8px;
 
     .logo-pets {
       max-width: 190px;
@@ -126,7 +147,7 @@ export const Footer = styled.footer`
   }
 
   @media only screen and (max-width: 1200px) {
-    padding: 35px 0 55px;
+    padding: 35px 0 8px;
 
     .logo-pets {
       max-width: 160px;
@@ -158,7 +179,7 @@ export const Footer = styled.footer`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 25px 0 40px;
+    padding: 25px 0 8px;
 
     .logo {
       gap: 15px;
@@ -203,10 +224,20 @@ export const Footer = styled.footer`
     .links-contato {
       margin-bottom: 7px;
     }
+
+    .barra-footer {
+      margin-top: 25px;
+      
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+    }
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 20px 0 35px;
+    padding: 20px 0 8px;
 
     .logo-ceo {
       max-width: 75px;

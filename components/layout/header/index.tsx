@@ -110,8 +110,8 @@ export function HeaderComponent() {
             </li>
 
             <li>
-              <Link href={"/quem-somos"} passHref>
-                <a href="replaced" className="link-1-regular">
+              <Link href={"/quem-somos"} >
+                <a href="" className="link-1-regular">
                   quem somos
                 </a>
               </Link>
